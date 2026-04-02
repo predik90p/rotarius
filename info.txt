@@ -1,0 +1,166 @@
+Reactive Drone 
+Reactive Drone LLC – jest wiodącym ukraińskim producentem i dostawcą
+zaawansowanych, sprawdzonych w boju systemów bezzałogowych, elektroniki i sprzętu
+dronowego. 
+Reactive Drone działa w następujących obszarach: 
+-Seryjna produkcja bezzałogowych statków powietrznych (UAV) zarówno dla sektora
+wojskowego, jak i cywilnego, 
+-Własny rozwój komponentów elektronicznych, takich jak nawigacja, FC.?? 
+-Przetwarzanie i produkcja przemysłowa, która obejmuje etapy mechaniczne,
+elektryczne, fizyczne i chemiczne. 
+-Badania i rozwój 
+-Szkoła pilotów 
+-Serwis UAV 
+Od 2018 roku jesteśmy pionierami w dziedzinie bezzałogowych statków powietrznych
+dla rolnictwa. Nasze dziedzictwo opiera się na podwójnej specjalizacji: produkcji
+wysokowydajnych dronów do opryskiwania na rynki międzynarodowe oraz świadczeniu
+usług w zakresie precyzyjnego opryskiwania upraw na dużą skalę. 
+Na początku 2026 roku firma zatrudnia ponad 300 pracowników w wielu
+przedstawicielstwach i zakładach produkcyjnych na całym świecie: 
+Ukraina (siedziba główna, szereg zakładów produkcyjnych) 
+Polska (biuro, produkcja) 
+Stany Zjednoczone (biuro) 
+Czechy (biuro) 
+Zakłady w Polsce są reprezentowane przez partnera w postaci firmy SKL (SPECJALNE
+KONSTRUKCJE LOTNICZE) 
+Filozofia
+W Reactive Drone LLC naszą filozofią jest budowanie kompleksowego ekosystemu
+bezzałogowych statków powietrznych (UAV), a nie tylko samodzielnego produktu.
+Wierzymy, że takie branże technologiczne i szybko rozwijające się jak UAV nie mogą
+istnieć wyłącznie w oparciu o linie produkcyjne i gotowe produkty.
+EKOSYSTEM oznacza istnienie pełnego cyklu tworzenia.
+Każda etap EKOSYSTEMU jest zależna od wszystkich pozostałych etapów, co
+oznacza, że tylko zarządzanie wszystkimi procesami może przynieść oczekiwane
+rezultaty. 
+Wszystkie działy ściśle ze sobą współpracują, znacznie podnosząc jakość produktów i
+usług.
+Wdrożenie 
+Badania i rozwój 
+Firma posiada własny dział badań i rozwoju zlokalizowany głównie na Ukrainie i w
+Polsce, w skład którego wchodzą specjaliści z następujących dziedzin: 
+Inżynieria lotnicza 
+Inżynierii mechanicznej 
+Analizy strukturalnej 
+Inżynierii oprogramowania 
+Informatyki 
+Inżynierii produkcji 
+Inżynierowie i specjaliści IT posiadają zarówno wykształcenie akademickie, jak i
+praktyczne umiejętności, ściśle współpracują ze wszystkimi innymi działami i
+społecznością użytkowników, a nawet przechodzą szkolenia między działowe. 
+Dział pracuje nad rozwiązaniami dla istniejącej generacji produktów i urządzeń, jak i
+nad długoterminowymi produktami nowej generacji.
+Produkcja 
+Zakłady produkcyjne firmy zapewniają pełen cykl produkcyjny, w tym drony, sprzęt i
+kluczowe komponenty. 
+Firma posiada 4 linie produkcyjne na Ukrainie, które koncentrują się na 
+-Seryjnej produkcji dronów 
+-Obróbce mechanicznej 
+-Produkcji sprzętu i systemów 
+-Montażu kluczowych komponentów 
+Reactive Drone we współpracy z SKL posiada zakład produkcyjny w Polsce, którego
+priorytetem jest produkcja kluczowych komponentów, takich jak 
+Kamery dzienne/IR z gimbalem 
+Baterie 
+Sprzęt radiowy (piloty, anteny, moduły) 
+Kontrolery lotu 
+Sprzęt nawigacyjny 
+Ogólny sprzęt i elektronika 
+Zakłady produkcyjne mogą wyprodukować ponad 20 000 różnych dronów rocznie.
+Testowanie i kontrola jakości 
+Testowanie i kontrola jakości stanowią istotną część cyklu i są jedynym sposobem
+zagwarantowania wysokiej jakości wszystkich produktów i urządzeń. 
+Cykl obejmuje proces testowania „wewnętrznego” i „terenowego” 
+Nasz proces kontroli wewnętrznej obejmuje znormalizowane narzędzia i metody kontroli
+oraz unikalną metodologię wykorzystującą specjalnie skonstruowane stanowiska
+testowe. Wieloetapowa kontrola w połączeniu z symulacją warunków wysokiego
+obciążenia, oparta na bogatym doświadczeniu, pozwala zidentyfikować potencjalne
+problemy, aby zagwarantować najwyższą jakość i użyteczność. 
+Testy terenowe obejmują symulację rzeczywistych warunków pracy różnych produktów
+oraz praktyczne testy optymalnych parametrów, które zostały ustalone na podstawie
+doświadczeń użytkowych.
+Szkoła Pilotów 
+Szkoła pilotów Reactive Drone posiada certyfikat Ministerstwa Obrony Ukrainy i
+oferuje specjalistyczne szkolenia w zakresie obsługi dronów BVLOS z własnym
+certyfikatem. 
+Nasz zespół instruktorów składa się z: 
+Weteranów wojskowych 
+Operatorów cywilnych bezzałogowych statków powietrznych (UAV) 
+Inżynierów 
+Badaczy 
+Szkoła zapewnia kompleksowe szkolenie obejmujące różne tryby lotu, w tym
+scenariusze ręczne, automatyczne, półautomatyczne i zakłócenia EW??. Uczniowie
+spędzają 60-70% czasu szkolenia na prawdziwych lotach bezzałogowymi statkami
+powietrznymi, uzupełnionych praktycznymi symulacjami zadań operacyjnych.
+Serwis i modernizacja
+Reactive Drone posiada własny dział serwisowy i modernizacyjny, który pozostaje w
+stałym kontakcie z użytkownikami końcowymi, zapewniając wszelkiego rodzaju serwisu
+związane z produktami firmy w krótkim czasie (do 72 godzin od otrzymania produktu). 
+Priorytetowo traktujemy modułową aktualizacji wszystkich naszych systemów.
+Niezależnie od tego, czy chodzi o aktualizację oprogramowania, czy zmianę generacji
+sprzętu, projektujemy nasze technologie tak, aby pasowały do istniejących platform.
+Proces ten jest w całości zarządzany, co gwarantuje, że każda modernizacja zachowuje
+nasze wysoki standardy integralności ekosystemu. Modernizacja istniejących dronów
+może faktycznie przedłużyć ich żywotność od miesięcy do lat. 
+W obszarach o dużej koncentracji użytkowników końcowych istnieje opcja brygady
+terenowej, która zapewnia szybsze usługi.
+Komunikacja i społeczność 
+Reactive Drone stworzyło społeczność cywilnych i wojskowych użytkowników
+końcowych w celu szybkiego zbierania opinii oraz umożliwienia komunikacji i
+dostarczania nowych lub testowanych technologii i rozwiązań. 
+Firma aktywnie uczestniczy również w wielu społecznościach wojskowych,
+producentów, przemysłowych i wolontariackiej. Jesteśmy członkami różnych
+stowarzyszeń zajmujących się obronnością. 
+Firma jest mocno reprezentowana na stronach internetowych, wystawach i
+konferencjach na całym świecie poprzez prezentacje, produkty i kadrę zarządzającą. 
+Wszystkie te elementy sprawiają, że jesteśmy na bieżąco we wszystkich dziedzinach i
+możemy dostarczać niezbędne i aktualne produkty. 
+Lista produktów 
+Wojskowe bezzałogowe statki powietrzne (UAS) 
+Firma Reactive Drone dostarcza szereg wojskowych bezzałogowych statków
+powietrznych (UAS) z najpopularniejszymi modelami KAZHAN (BAT), SHMAVIC i
+POPFLY. 
+Kazhan (Bat) – duży wielowirnikowy dron bojowy, który jest jednym z najczęściej
+używanych na froncie. Dron jest dostępny w 2 wersjach: Kazhan E620 z 4 silnikami i
+ładownością 20 kg oraz Kazhan E630 z 6 silnikami i ładownością do 30 kg oraz
+możliwością przenoszenia jej na odległość 20 km. Wszystkie drony Kazhan są
+wyposażone w odporny na zakłócenia radiowe i nawigacyjny system, podwójną kamerę
+zintegrowaną z AI oraz uniwersalny system zwalniania. Wszystkie wersje Kazhan
+posiadają kod NSN. 
+Shmavic to mikro dron klasy ISR z wieloma wirnikami, przeznaczony do misji
+rozpoznawczych i specjalnych, o zasięgu bojowym 25 km. Shmavic został
+zaprojektowany i wyprodukowany specjalnie do warunków bojowych, z odpornym na
+zakłócenia elektronicznego radiem cyfrowym dwupasmowym, intuicyjnym interfejsem i
+wysokiej jakości kamerą. Shmavic jest również wyposażony w system zwalniania.
+Wszystkie wersje Shmavik mają kod NCN. 
+POP-FLY Wielozadaniowa platforma operacyjno-taktyczna do misji rozpoznawczych i
+uderzeniowych o zasięgu 50–100 km, wyposażona w podwójną kamerę o wysokiej
+rozdzielczości z funkcjami AI. Dron posiada odporne na zakłócenia elektroniczne
+cyfrowe, dwupasmowe radio oraz satelitarny i inercyjny system nawigacyjny. POPFLY
+to system szybkiego startu z tuby z możliwością pneumatycznego lub pirotechnicznego
+wyzwalania. Dron może być obsługiwany w trybie ręcznym, półautomatycznym i
+automatycznym.
+Cywilne bezzałogowe statki powietrzne (UAS)
+Reactive Drone oferuje produkty cywilne o długiej historii użytkowania.
+Drony rolnicze są dostępne w różnych modelach przeznaczonych do opryskiwania,
+monitorowania i innych zadań. Firma opracowała również i z powodzeniem wdrożyła
+technologie usług rolniczych poprzez swój dział usług rolniczych UAV. 
+Drony gaśnicze, używane przez ukraińskie służby ratownicze, zostały stworzone we
+współpracy z instytutem ratownictwa. Te wielofunkcyjne platformy mogą być
+wyposażone w różne rodzaje narzędzi gaśniczych, takie jak proszek, pianka lub bomby.
+Drony transportowe są szeroko stosowane zarówno w kontekście cywilnym, jak i
+wojskowym. Są one dostępne w kilku konfiguracjach do dostarczania ładunków, sprzętu
+i generatorów do odległych lub trudno dostępnych obszarów.
+Kluczowe komponenty
+Reactive Drone produkuje różne kluczowe urządzenia dla branży statków
+bezzałogowych, w tym:
+Kamery dzienno-podczerwone w różnych konfiguracjach z wbudowaną funkcją
+sztucznej inteligencji.
+Baterie stałe i półstałe o wysokim współczynniku zwrotu prądu, technologia
+samonagrzewania dla branży dronów 
+Cyfrowy system radiowy, który obejmuje system radiowy dwupasmowy o zakresie
+częstotliwości od 2,1 do 6,0 GHz z modułem powietrznym i zintegrowany z 10-calowym
+pilotem zdalnego sterowania.
+Różnorodne rozwiązania w zakresie anten radiowych, w tym opcje aktywne i pasywne.
+Kontroler lotu dla dronów wielowirnikowych, dronów ze skrzydłami stałymi i kontroler dla
+pojazdów naziemnych
+Inteligentny sprzęt nawigacyjny odporny na zakłócenia elektronicznego
