@@ -1,59 +1,69 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Link from "next/link"
-import { ArrowRight, Flame, Navigation, Sprout, ShieldAlert, Zap } from "lucide-react"
+import { ArrowRight, Flame, Sprout, ShieldAlert } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useLocale } from "@/components/locale-provider"
 
-const THEMES = [
-  {
-    id: 'agro',
-    category: 'Smart Agriculture',
-    title: 'Future of Farming',
-    desc: 'VerdaAgro combines precision engineering with biological insights. Maximize yields with autonomous drone fleets and IoT sensor networks.',
-    image: '/products/Kazhan-AGRO-30-agricultural-drone.jpg',
-    typeColor: '#22c55e',
-    icon: Sprout,
-  },
-  {
-    id: 'military',
-    category: 'Tactical Defense',
-    title: 'Precision Security',
-    desc: 'Military-grade UAV systems designed for high-stakes reconnaissance and strategic superiority. Swiss-engineered reliability for global defense.',
-    image: '/e630hd.png',
-    typeColor: '#3b82f6',
-    icon: ShieldAlert,
-  },
-  {
-    id: 'firefighting',
-    category: 'Emergency Response',
-    title: 'Thermal Resilience',
-    desc: 'Next-generation firefighting drones with advanced thermal optics. Rapid deployment in high-temperature environments to save lives and forests.',
-    image: '/products/Kazhan-E630-Firefighter-Drone-1.webp',
-    typeColor: '#fb923c',
-    icon: Flame,
-  }
-]
+export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
+  activeIdx: number
+  onIdxChange: (idx: number) => void
+  isAuto: boolean
+  setIsAuto: (auto: boolean) => void
+}) {
+  const { dict } = useLocale()
 
-interface HeroSectionProps {
-  activeIdx: number;
-  onIdxChange: (idx: number) => void;
-  isAuto: boolean;
-  setIsAuto: (auto: boolean) => void;
-}
+  useEffect(() => {
+    if (!isAuto) return
+    const interval = setInterval(() => {
+      onIdxChange((prev) => (prev + 1) % 3)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [isAuto, onIdxChange])
 
-export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: HeroSectionProps) {
-  const current = THEMES[activeIdx]
+  const themes = [
+    {
+      id: 'agro',
+      category: dict.hero.categories.agro,
+      title: dict.hero.titles.agro,
+      desc: dict.hero.descriptions.agro,
+      image: '/products/Kazhan-AGRO-30-agricultural-drone.jpg',
+      typeColor: '#22c55e',
+      icon: Sprout,
+    },
+    {
+      id: 'military',
+      category: dict.hero.categories.military,
+      title: dict.hero.titles.military,
+      desc: dict.hero.descriptions.military,
+      image: '/e630hd.png',
+      typeColor: '#3b82f6',
+      icon: ShieldAlert,
+    },
+    {
+      id: 'firefighting',
+      category: dict.hero.categories.firefighting,
+      title: dict.hero.titles.firefighting,
+      desc: dict.hero.descriptions.firefighting,
+      image: '/products/Kazhan-E630-Firefighter-Drone-1.webp',
+      typeColor: '#fb923c',
+      icon: Flame,
+    }
+  ]
+
+  const current = themes[activeIdx]
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden transition-all duration-1000">
-      {/* Background Section (Images with Transitions) */}
+      {/* Background Images */}
       <div className="absolute inset-0 z-0">
-        {THEMES.map((theme, idx) => (
+        {themes.map((theme, idx) => (
           <div
             key={theme.id}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out scale-105 ${idx === activeIdx ? 'opacity-100' : 'opacity-0'
-              }`}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out scale-105 ${
+              idx === activeIdx ? 'opacity-100' : 'opacity-0'
+            }`}
             style={{ backgroundImage: `url('${theme.image}')` }}
           />
         ))}
@@ -65,7 +75,8 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: HeroS
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-32 z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Transitioning Content */}
+
+          {/* Left Content */}
           <div key={activeIdx} className="max-w-2xl animate-in fade-in slide-in-from-left-4 duration-1000">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 rounded-full bg-white/10 border border-white/20">
@@ -86,92 +97,126 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: HeroS
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-5">
-              <Button asChild size="lg" className="bg-white/10 border border-white/20 text-white px-8 py-7 text-lg rounded-2xl group transition-all duration-500 hover:scale-105 hover:bg-white/15 active:scale-95 shadow-2xl backdrop-blur-md" style={{ '--tc': current.typeColor } as React.CSSProperties & Record<string, string>}>
+              <Button
+                asChild
+                size="lg"
+                className="bg-white/10 border border-white/20 text-white px-8 py-7 text-lg rounded-2xl group transition-all duration-500 hover:scale-105 hover:bg-white/15 active:scale-95 shadow-2xl backdrop-blur-md"
+                style={{ '--tc': current.typeColor } as React.CSSProperties & Record<string, string>}
+              >
                 <Link href={`/solutions/${current.id}`} className="flex items-center">
-                  Explore Solutions
+                  {dict.hero.exploreSolutions}
                   <ArrowRight className="ml-3 h-5 w-5 transition-colors duration-300 text-white/70 group-hover:[color:var(--tc)] group-hover:translate-x-2" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="bg-white/15 border-white/30 hover:bg-white/30 hover:border-white/60 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] text-white px-8 py-7 text-lg rounded-2xl transition-all backdrop-blur-md">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="bg-white/15 border-white/30 hover:bg-white/30 hover:border-white/60 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] text-white px-8 py-7 text-lg rounded-2xl transition-all backdrop-blur-md"
+              >
                 <Link href="/history">
-                  Learn Tech
+                  {dict.hero.learnTech}
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* orbital Visual Section Syncing with activeIdx */}
+          {/* Right Orbital Visual */}
           <div className="hidden lg:flex relative lg:pl-8">
             <div className="relative aspect-square w-full max-w-lg mx-auto">
-              {/* Concentric Circles (Non-interactive) */}
+
+              {/* Concentric Circles */}
               <div className="absolute inset-0 rounded-full border border-white/10 pointer-events-none" />
               <div className="absolute inset-8 rounded-full border border-white/10 pointer-events-none" />
 
-              {/* Center Branding Logo (Persistent) */}
+              {/* Center Logo */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-40 h-40 rounded-full flex items-center justify-center bg-black/30 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden animate-in zoom-in duration-1000">
+                <div className="w-40 h-40 rounded-full flex items-center justify-center bg-black/30 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden">
                   <img src="/logof.png" alt="Branding" className="w-full h-full object-contain p-6" />
                 </div>
               </div>
 
-              {/* Orbital Segments - Highlighting Active Theme (INTERACTIVE) */}
-              <div className="absolute inset-0 rounded-full z-50">
-                {THEMES.map((theme, i) => {
-                  const rotation = i * 120;
+              {/* Atmospheric Drones — pointer-events-none so they never block buttons */}
+              <div className="absolute inset-0 pointer-events-none">
+                <div
+                  className="absolute inset-0 animate-spin"
+                  style={{ animationDuration: '15s' }}
+                >
+                  <img src="/droneicon.gif" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20" style={{ filter: `drop-shadow(0 0 20px ${current.typeColor}80) brightness(0) invert(1)` }} />
+              </div>
+                <div className="absolute inset-4 animate-spin" style={{ animationDuration: '45s', animationDirection: 'reverse' }}>
+                  <img src="/droneicon.gif" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 opacity-60" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}60) brightness(0) invert(1)` }} />
+                </div>
+                <div className="absolute inset-16 animate-spin" style={{ animationDuration: '25s' }}>
+                  <img src="/droneicon.gif" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-7 opacity-50" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}50) brightness(0) invert(1)` }} />
+                </div>
+                <div className="absolute inset-[-30px] animate-spin" style={{ animationDuration: '60s' }}>
+                  <img src="/droneicon.gif" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 opacity-40" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}40) brightness(0) invert(1)` }} />
+                </div>
+                <div className="absolute inset-12 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}>
+                  <img src="/droneicon.gif" alt="" className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-7 opacity-55" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}55) brightness(0) invert(1)` }} />
+                </div>
+              </div>
+
+              {/* Orbital Arc Highlight */}
+              <div
+                className="absolute inset-0 rounded-full border-2 transition-colors duration-1000 ease-in-out pointer-events-none"
+                style={{
+                  transform: `rotate(${activeIdx * 120}deg)`,
+                  clipPath: 'inset(0 0 70% 0)',
+                  borderColor: current.typeColor + '66'
+                }}
+              />
+
+              {/* Orbital Buttons — rendered LAST so they sit on top of everything */}
+              <div className="absolute inset-0 rounded-full" style={{ zIndex: 60 }}>
+                {themes.map((theme, i) => {
+                  const rotation = i * 120
                   return (
                     <div
                       key={theme.id}
-                      className="absolute inset-0 transition-all duration-1000 pointer-events-none"
+                      className="absolute inset-0 pointer-events-none"
                       style={{ transform: `rotate(${rotation}deg)` }}
                     >
-                      <button
-                        onClick={() => onIdxChange(i)}
-                        className="absolute -top-6 left-1/2 -translate-x-1/2 px-6 py-2.5 rounded-full border transition-all duration-500 flex items-center gap-3 cursor-pointer pointer-events-auto hover:brightness-125 hover:scale-110 active:scale-95"
+                      {/*
+                        Separate wrapper handles position + counter-rotation
+                        so it doesn't conflict with Tailwind's translate on the button itself
+                      */}
+                      <div
+                        className="absolute left-1/2 -top-6 pointer-events-auto"
                         style={{
-                          transform: `rotate(-${rotation}deg)`,
-                          backgroundColor: i === activeIdx ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0.4)',
-                          borderColor: i === activeIdx ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.05)',
-                          color: i === activeIdx ? theme.typeColor : 'rgba(255,255,255,0.4)',
-                          transform: `rotate(-${rotation}deg)`,
-                          scale: i === activeIdx ? '1.25' : '1.05',
-                          boxShadow: i === activeIdx ? `0 25px 50px -12px ${theme.typeColor}20, 0 0 0 2px rgba(255,255,255,0.1)` : 'none',
-                          zIndex: i === activeIdx ? 50 : 40,
+                          transform: `translateX(-50%) rotate(-${rotation}deg)`,
                         }}
                       >
-                        <theme.icon className="w-5 h-5" style={{ color: i === activeIdx ? theme.typeColor : 'rgba(255,255,255,0.4)' }} />
-                        <span className="text-[11px] font-black uppercase tracking-wider text-white">{theme.id.toUpperCase()}</span>
-                      </button>
+                        <button
+                          onClick={() => { onIdxChange(i); setIsAuto(false) }}
+                          className="flex items-center gap-3 px-6 py-2.5 rounded-full border transition-all duration-500 hover:brightness-125 hover:scale-110 active:scale-95 cursor-pointer"
+                          style={{
+                            backgroundColor: i === activeIdx ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0.4)',
+                            borderColor: i === activeIdx ? 'rgba(255,255,255,0.6)' : 'rgba(255,255,255,0.05)',
+                            boxShadow: i === activeIdx
+                              ? `0 25px 50px -12px ${theme.typeColor}20, 0 0 0 2px rgba(255,255,255,0.1)`
+                              : 'none',
+                            scale: i === activeIdx ? '1.15' : '1',
+                          }}
+                        >
+                          <theme.icon
+                            className="w-5 h-5"
+                            style={{ color: i === activeIdx ? theme.typeColor : 'rgba(255,255,255,0.4)' }}
+                          />
+                          <span className="text-[11px] font-black uppercase tracking-wider text-white">
+                            {dict.hero.orbitalLabels[theme.id as keyof typeof dict.hero.orbitalLabels]}
+                          </span>
+                        </button>
+                      </div>
                     </div>
                   )
                 })}
               </div>
 
-              {/* orbital Highlight (Ring rotation based on activeIdx) */}
-              <div
-                className="absolute inset-0 rounded-full border-2 transition-colors duration-1000 ease-in-out pointer-events-none"
-                style={{ transform: `rotate(${activeIdx * 120}deg)`, clipPath: 'inset(0 0 70% 0)', borderColor: current.typeColor + '66' }}
-              />
-
-              {/* Orbital Flying Drones (Main Topic Tracker) */}
-              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '30s' }}>
-                <img src="/droneicon.gif" alt="drone" className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 drop-shadow-[0_0_20px_rgba(255,255,255,0.7)] transition-colors duration-1000" style={{ filter: `drop-shadow(0 0 20px ${current.typeColor}80) brightness(0) invert(1)`, color: current.typeColor }} />
-              </div>
-
-              {/* Smaller Atmospheric Drones (MADE BIGGER) */}
-              <div className="absolute inset-4 animate-spin" style={{ animationDuration: '45s', animationDirection: 'reverse' }}>
-                <img src="/droneicon.gif" alt="drone" className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-8 opacity-60 transition-colors duration-1000" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}60) brightness(0) invert(1)` }} />
-              </div>
-              <div className="absolute inset-16 animate-spin" style={{ animationDuration: '25s' }}>
-                <img src="/droneicon.gif" alt="drone" className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-7 opacity-50 transition-colors duration-1000" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}50) brightness(0) invert(1)` }} />
-              </div>
-              <div className="absolute inset-[-30px] animate-spin" style={{ animationDuration: '60s' }}>
-                <img src="/droneicon.gif" alt="drone" className="absolute top-0 left-1/2 -translate-x-1/2 w-6 h-6 opacity-40 transition-colors duration-1000" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}40) brightness(0) invert(1)` }} />
-              </div>
-              <div className="absolute inset-12 animate-spin" style={{ animationDuration: '35s', animationDirection: 'reverse' }}>
-                <img src="/droneicon.gif" alt="drone" className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-7 opacity-55 transition-colors duration-1000" style={{ filter: `drop-shadow(0 0 8px ${current.typeColor}55) brightness(0) invert(1)` }} />
-              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

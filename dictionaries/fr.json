@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "solutions": "Solutions",
+    "history": "Histoire",
+    "contact": "Contact",
+    "getInTouch": "Nous contacter"
+  },
+  "hero": {
+    "categories": {
+      "agro": "Agriculture Intelligente",
+      "military": "Défense Tactique",
+      "firefighting": "Intervention d'Urgence"
+    },
+    "titles": {
+      "agro": "L'Avenir de l'Agriculture",
+      "military": "Sécurité de Précision",
+      "firefighting": "Résistance Thermique"
+    },
+    "descriptions": {
+      "agro": "VerdaAgro combine l'ingénierie de précision avec des connaissances biologiques. Maximisez les rendements avec des flottes de drones autonomes et des réseaux de capteurs IoT.",
+      "military": "Systèmes UAV de qualité militaire conçus pour la reconnaissance à haut risque et la supériorité stratégique. Fiabilité suisse pour la défense mondiale.",
+      "firefighting": "Drones de lutte contre les incendies de nouvelle génération avec optique thermique avancée. Déploiement rapide dans des environnements à haute température pour sauver des vies et des forêts."
+    },
+    "exploreSolutions": "Découvrir les Solutions",
+    "learnTech": "Découvrir la Technologie",
+    "freeFly": "Vol Libre",
+    "scanningSystems": "Systèmes de Balayage",
+    "orbitalLabels": {
+      "agro": "AGRO",
+      "military": "MILITAIRE",
+      "firefighting": "POMPIERS"
+    }
+  },
+  "info": {
+    "agro": {
+      "tag": "SOUTIEN AGRICOLE",
+      "title": "Agriculture Intelligente pour une Planète en Mutation",
+      "cards": [
+        {
+          "title": "Gestion Précise des Cultures",
+          "desc": "Flottes de drones autonomes équipées de capteurs multispectraux pour l'analyse en temps réel de la santé des cultures et l'application ciblée de traitements."
+        },
+        {
+          "title": "Analyse du Sol et du Rendement",
+          "desc": "Intégration profonde de capteurs pour surveiller les niveaux de nutriments, l'humidité et prédire les fenêtres de récolte optimales."
+        },
+        {
+          "title": "Application Écologique",
+          "desc": "Réduisez les déchets chimiques jusqu'à 40% avec la technologie de pulvérisation ciblée par drone qui protège la biodiversité."
+        }
+      ]
+    },
+    "military": {
+      "tag": "DÉFENSE TACTIQUE",
+      "title": "Renseignement et Reconnaissance de Défense",
+      "cards": [
+        {
+          "title": "Surveillance Furtive",
+          "desc": "Conceptions UAV furtives pour la reconnaissance dans un espace aérien contesté avec une empreinte radar minimale."
+        },
+        {
+          "title": "Communications Sécurisées",
+          "desc": "Liaisons de données chiffrées résilientes conçues pour maintenir la communication sous un brouillage électronique intense."
+        },
+        {
+          "title": "Surveillance des Frontières",
+          "desc": "Surveillance périmétrique autonome 24h/24 avec détection d'anomalies alimentée par l'IA et systèmes d'alerte."
+        }
+      ]
+    },
+    "firefighting": {
+      "tag": "INTERVENTION D'URGENCE",
+      "title": "Lutte Contre les Incendies et Opérations de Sauvetage",
+      "cards": [
+        {
+          "title": "Détection de Points Chauds Thermiques",
+          "desc": "Cartographie thermique en temps réel pour la lutte contre les incendies de forêt et de structure avec prédiction de points chauds par IA."
+        },
+        {
+          "title": "Suppression de Précision",
+          "desc": "Livraison autonome de matériaux ignifuges à haut volume directement aux points chauds avec un impact collatéral minimal."
+        },
+        {
+          "title": "Recherche et Sauvetage",
+          "desc": "Capteurs à double spectre pour trouver des personnes disparues à travers la fumée et les débris environnementaux denses."
+        }
+      ]
+    },
+    "readMore": "Lire la Suite"
+  },
+  "about": {
+    "title": "À Propos de Rotarius",
+    "description": "Précision suisse basée sur des années d'expertise UAV. Fabrication complète de drones pour l'agriculture, la défense et les interventions d'urgence.",
+    "readAboutUs": "En Savoir Plus"
+  },
+  "news": {
+    "label": "DERNIÈRES NOUVELLES",
+    "title": "Découvrez Nos Dernières Nouvelles & Conseils",
+    "readMore": "Lire la Suite",
+    "items": [
+      {
+        "category": "Récolte",
+        "title": "Dernières Mises à Jour dans l'Agriculture Mondiale",
+        "date": "18 AOÛT 2025"
+      },
+      {
+        "category": "Agriculture",
+        "title": "Comment la Technologie Transforme l'Agriculture",
+        "date": "18 AOÛT 2025"
+      },
+      {
+        "category": "Agri-Tech",
+        "title": "Agriculture Biologique vs Conventionnelle",
+        "date": "18 AOÛT 2025"
+      }
+    ]
+  },
+  "footer": {
+    "readyToDiscuss": "Prêt à Discuter ?",
+    "readyText": "Notre équipe est prête à vous aider à trouver la bonne solution.",
+    "scheduleConsultation": "Planifier une Consultation",
+    "viewSolutions": "Voir les Solutions",
+    "description": "Précision suisse basée sur des années d'expertise UAV. Fabrication complète de drones pour l'agriculture, la défense et les interventions d'urgence.",
+    "products": "Produits",
+    "solutions": "Solutions",
+    "company": "Entreprise",
+    "aboutUs": "À Propos",
+    "historyVision": "Histoire & Vision",
+    "news": "Nouvelles",
+    "contact": "Contact",
+    "agriculture": "Agriculture",
+    "defense": "Défense",
+    "emergency": "Urgence",
+    "allProducts": "Tous les Produits",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "exportCompliance": "Conformité à l'Exportation",
+    "allRightsReserved": "Tous droits réservés."
+  },
+  "products": {
+    "title": "Produits",
+    "categories": ["Tous", "Militaire", "Agriculture", "Urgence", "ISR", "Tactique"],
+    "viewSpecs": "Voir les spécifications",
+    "nextProduct": "Produit Suivant",
+    "dropdownCategories": {
+      "title": "Catégories",
+      "military": "UAS Militaire",
+      "agriculture": "Agriculture",
+      "firefighting": "Lutte Incendie",
+      "isr": "ISR & Reconnaissance",
+      "transport": "Transport",
+      "components": "Composants",
+      "viewAll": "Voir Tous les Produits"
+    }
+  },
+  "solutions": {
+    "title": "Solutions Stratégiques",
+    "subtitle": "Fournir une intégration technologique avancée pour l'agriculture, la défense mondiale et les interventions d'urgence.",
+    "label": "NOTRE EXPERTISE",
+    "pillarsTitle": "Nos Piliers Industriels Principaux",
+    "pillarsDesc": "Rotarius fournit des solutions spécialisées dans les secteurs environnementaux et tactiques les plus exigeants.",
+    "readMore": "Lire la Suite",
+    "viewAll": "Voir Toutes les Solutions",
+    "megaMenu": {
+      "agroTitle": "Agriculture Intelligente & Durable",
+      "militaryTitle": "Défense Tactique & Surveillance",
+      "fireTitle": "Secours d'Urgence & Support"
+    },
+    "agro": {
+      "tag": "DIVISION AGRO",
+      "title": "Agriculture Intelligente & Durable",
+      "description": "Autonomiser la prochaine génération d'agriculteurs avec la technologie de drones autonomes pour l'application de précision et l'intelligence du sol.",
+      "features": [
+        { "title": "Pulvérisation de Précision", "desc": "Réduisez les déchets chimiques jusqu'à 40% avec la technologie d'application ciblée par drone." },
+        { "title": "Prédiction du Rendement", "desc": "Analyse multispectrale alimentée par l'IA pour prévoir la santé des cultures et le moment optimal de récolte." },
+        { "title": "Analyse du Sol", "desc": "Intégration profonde de capteurs pour surveiller les niveaux de nutriments et l'humidité sur l'ensemble de votre domaine." }
+      ]
+    },
+    "military": {
+      "tag": "DÉFENSE TACTIQUE",
+      "title": "Défense Tactique & Surveillance",
+      "description": "Guerre électronique à l'échelle mondiale et technologie de reconnaissance furtive pour la domination opérationnelle moderne.",
+      "features": [
+        { "title": "Technologie Furtive", "desc": "Conceptions UAV furtives pour la reconnaissance dans un espace aérien contesté avec une empreinte radar minimale." },
+        { "title": "Défense Anti-Brouillage", "desc": "Liaisons de données chiffrées résilientes conçues pour maintenir la communication sous un brouillage électronique intense." },
+        { "title": "Contrôle des Frontières", "desc": "Surveillance périmétrique autonome 24h/24 avec détection d'anomalies alimentée par l'IA et systèmes d'alerte." }
+      ]
+    },
+    "firefighting": {
+      "tag": "SYSTÈMES D'URGENCE",
+      "title": "Secours d'Urgence & Support",
+      "description": "Flottes de drones à réponse rapide pour la lutte contre les incendies de précision et la recherche et sauvetage à haut risque en terrain dangereux.",
+      "features": [
+        { "title": "Cartographie Thermique des Incendies", "desc": "Détection en temps réel des points chauds thermiques pour la lutte contre les incendies de forêt et de structure." },
+        { "title": "Suppression de Précision", "desc": "Livraison autonome de matériaux ignifuges à haut volume directement aux points chauds." },
+        { "title": "Recherche & Sauvetage", "desc": "Capteurs à double spectre pour trouver des personnes disparues à travers la fumée et les débris environnementaux denses." }
+      ]
+    }
+  },
+  "history": {
+    "title": "Histoire",
+    "label": "Notre Histoire",
+    "timelineTitle": "Du Terrain aux Fondations",
+    "timelineDesc": "Sept ans de construction, de test et de déploiement de systèmes sans pilote — aboutissant à la création de Rotarius.",
+    "philosophyLabel": "Notre Philosophie",
+    "philosophyTitle": "Écosystème, Pas Juste un Produit",
+    "philosophyDesc1": "Chez Rotarius, notre philosophie est de construire un écosystème UAV complet — pas seulement un produit autonome. Dans une industrie en évolution rapide comme les systèmes sans pilote, les lignes de production et les produits finis seuls ne suffisent pas.",
+    "philosophyDesc2": "Un écosystème signifie que le cycle de création complet existe sous un même toit. Chaque étape dépend de chaque autre — ce n'est qu'en gérant tous les processus ensemble que nous pouvons livrer les résultats que nos clients attendent.",
+    "ecosystemLabel": "L'Écosystème",
+    "ecosystemTitle": "Capacités de Cycle Complet",
+    "ecosystemDesc": "Chaque département est interconnecté — de la R&D à la formation des pilotes en passant par le service sur le terrain. Un écosystème, une norme.",
+    "solutionsLabel": "Solutions",
+    "solutionsTitle": "Plateformes pour Chaque Mission",
+    "componentsLabel": "Composants Clés",
+    "componentsTitle": "Intégration Verticale",
+    "componentsDesc": "Nous n'assemblons pas seulement des drones — nous fabriquons les composants critiques qui les font fonctionner. Cette intégration verticale nous donne un contrôle total sur la qualité, les performances et la fiabilité de la chaîne d'approvisionnement.",
+    "learnMore": "En savoir plus",
+    "stats": {
+      "years": "Années d'Expérience",
+      "team": "Membres de l'Équipe",
+      "units": "Unités Produites Annuellement",
+      "offices": "Bureaux Mondiaux"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "sendMessage": "Envoyez-nous un Message",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email Professionnel",
+    "organization": "Organisation",
+    "subject": "Sujet",
+    "message": "Message",
+    "selectSubject": "Sélectionner un sujet",
+    "subjects": {
+      "product": "Demande de Produit",
+      "partnership": "Opportunité de Partenariat",
+      "support": "Support Technique",
+      "media": "Demande Média",
+      "careers": "Opportunités de Carrière",
+      "other": "Autre"
+    },
+    "submit": "Soumettre la Demande",
+    "offices": "Nos Bureaux",
+    "businessHours": "Heures d'Ouverture",
+    "hours": {
+      "weekdays": "Lundi - Vendredi : 08:00 - 18:00 CET",
+      "weekends": "Samedi - Dimanche : Fermé",
+      "support": "Support 24/7 pour les détenteurs de contrats actifs"
+    }
+  },
+  "newsPage": {
+    "title": "Nouvelles",
+    "featured": "En Vedette",
+    "allNews": "Toutes les Nouvelles",
+    "readMore": "Lire la suite"
+  },
+  "productDetail": {
+    "allProducts": "Tous les Produits",
+    "contactUs": "Contactez-nous",
+    "technicalData": "Données Techniques",
+    "specifications": "Spécifications",
+    "nextProduct": "Produit Suivant"
+  },
+  "common": {
+    "required": "*",
+    "placeholder": "Veuillez décrire votre demande..."
+  }
+}

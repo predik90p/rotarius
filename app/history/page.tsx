@@ -6,7 +6,7 @@ import { ArrowRight, Target, Globe, Cpu, Factory, GraduationCap, Wrench, Users, 
 
 export const metadata: Metadata = {
   title: "History & Vision | Rotarius",
-  description: "The story of Rotarius — Swiss precision built on years of UAV innovation. Our history, vision, and the ecosystem behind our technology.",
+  description: "The story of Rotarius — Swiss precision built on years of UAV innovation.",
 }
 
 const timeline = [

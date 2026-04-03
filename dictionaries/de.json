@@ -1,0 +1,271 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "solutions": "Lösungen",
+    "history": "Geschichte",
+    "contact": "Kontakt",
+    "getInTouch": "Kontaktieren"
+  },
+  "hero": {
+    "categories": {
+      "agro": "Intelligente Landwirtschaft",
+      "military": "Taktische Verteidigung",
+      "firefighting": "Notfallrettung"
+    },
+    "titles": {
+      "agro": "Zukunft der Landwirtschaft",
+      "military": "Präzisionssicherheit",
+      "firefighting": "Thermische Widerstandsfähigkeit"
+    },
+    "descriptions": {
+      "agro": "VerdaAgro verbindet Präzisionstechnik mit biologischen Erkenntnissen. Maximieren Sie Erträge mit autonomen Drohnenschwärmen und IoT-Sensornetzwerken.",
+      "military": "Militärische UAV-Systeme für anspruchsvolle Aufklärung und strategische Überlegenheit. Schweizer Zuverlässigkeit für die globale Verteidigung.",
+      "firefighting": "Feuerlöschdrohnen der nächsten Generation mit fortschrittlicher Thermooptik. Schneller Einsatz in Hochtemperaturumgebungen zum Schutz von Leben und Wäldern."
+    },
+    "exploreSolutions": "Lösungen entdecken",
+    "learnTech": "Technologie lernen",
+    "freeFly": "Freiflug",
+    "scanningSystems": "Systeme scannen",
+    "orbitalLabels": {
+      "agro": "AGRO",
+      "military": "MILITÄR",
+      "firefighting": "FEUERWEHR"
+    }
+  },
+  "info": {
+    "agro": {
+      "tag": "LANDWIRTSCHAFTLICHE UNTERSTÜTZUNG",
+      "title": "Intelligente Landwirtschaft für einen sich wandelnden Planeten",
+      "cards": [
+        {
+          "title": "Präzises Pflanzenmanagement",
+          "desc": "Autonome Drohnenschwärme mit multispektralen Sensoren zur Echtzeit-Analyse der Pflanzengesundheit und gezielten Behandlung."
+        },
+        {
+          "title": "Boden- und Ertragsanalyse",
+          "desc": "Tiefe Sensorintegration zur Überwachung von Nährstoffgehalten, Feuchtigkeit und Vorhersage optimaler Erntefenster."
+        },
+        {
+          "title": "Umweltfreundliche Anwendung",
+          "desc": "Reduzieren Sie den Chemikalienverbrauch um bis zu 40 % mit gezielter Drohnensprühtechnologie, die die Biodiversität schützt."
+        }
+      ]
+    },
+    "military": {
+      "tag": "TAKTISCHE VERTEIDIGUNG",
+      "title": "Verteidigungsaufklärung und Überwachung",
+      "cards": [
+        {
+          "title": "Tarnüberwachung",
+          "desc": "Tarnkappen-UAV-Designs für Aufklärung in umkämpftem Luftraum mit minimalem Radarprofil."
+        },
+        {
+          "title": "Sichere Kommunikation",
+          "desc": "Robuste verschlüsselte Datenverbindungen zur Aufrechterhaltung der Kommunikation unter starker elektronischer Störung."
+        },
+        {
+          "title": "Grenzüberwachung",
+          "desc": "Autonome 24/7-Perimeterüberwachung mit KI-gesteuerter Anomalieerkennung und Alarmsystemen."
+        }
+      ]
+    },
+    "firefighting": {
+      "tag": "NOTFALLEINSATZ",
+      "title": "Feuerbekämpfung und Rettungsaktionen",
+      "cards": [
+        {
+          "title": "Thermische Hotspot-Erkennung",
+          "desc": "Echtzeit-Thermokartierung zur Wald- und Gebäudebrandbekämpfung mit KI-gestützter Hotspot-Vorhersage."
+        },
+        {
+          "title": "Präzise Löschmittelabgabe",
+          "desc": "Autonome Lieferung von hochvolumigem Feuerlöschmittel direkt zu Hotspots mit minimalen Nebeneffekten."
+        },
+        {
+          "title": "Suche und Rettung",
+          "desc": "Dualspektralsensoren zum Auffinden vermisster Personen durch Rauch und dichte Umweltrückstände."
+        }
+      ]
+    },
+    "readMore": "Weiterlesen"
+  },
+  "about": {
+    "title": "Über Rotarius",
+    "description": "Schweizer Präzision, aufgebaut auf jahrelanger UAV-Expertise. Vollständige Drohnenfertigung für Landwirtschaft, Verteidigung und Notfallrettung.",
+    "readAboutUs": "Über uns lesen"
+  },
+  "news": {
+    "label": "AKTUELLE NACHRICHTEN",
+    "title": "Entdecken Sie unsere neuesten Nachrichten & Tipps",
+    "readMore": "Weiterlesen",
+    "items": [
+      {
+        "category": "Ernte",
+        "title": "Neueste Entwicklungen in der globalen Landwirtschaft",
+        "date": "18. AUGUST 2025"
+      },
+      {
+        "category": "Landwirtschaft",
+        "title": "Wie Technologie die Landwirtschaft verändert",
+        "date": "18. AUGUST 2025"
+      },
+      {
+        "category": "Agri-Tech",
+        "title": "Biologische vs. konventionelle Landwirtschaft",
+        "date": "18. AUGUST 2025"
+      }
+    ]
+  },
+  "footer": {
+    "readyToDiscuss": "Bereit zu diskutieren?",
+    "readyText": "Unser Team ist bereit, Ihnen bei der richtigen Lösung zu helfen.",
+    "scheduleConsultation": "Beratung vereinbaren",
+    "viewSolutions": "Lösungen ansehen",
+    "description": "Schweizer Präzision, aufgebaut auf jahrelanger UAV-Expertise. Vollständige Drohnenfertigung für Landwirtschaft, Verteidigung und Notfallrettung.",
+    "products": "Produkte",
+    "solutions": "Lösungen",
+    "company": "Unternehmen",
+    "aboutUs": "Über uns",
+    "historyVision": "Geschichte & Vision",
+    "news": "Nachrichten",
+    "contact": "Kontakt",
+    "agriculture": "Landwirtschaft",
+    "defense": "Verteidigung",
+    "emergency": "Notfall",
+    "allProducts": "Alle Produkte",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "exportCompliance": "Exportkonformität",
+    "allRightsReserved": "Alle Rechte vorbehalten."
+  },
+  "products": {
+    "title": "Produkte",
+    "categories": ["Alle", "Militär", "Landwirtschaft", "Notfall", "ISR", "Taktisch"],
+    "viewSpecs": "Spezifikationen ansehen",
+    "nextProduct": "Nächstes Produkt",
+    "dropdownCategories": {
+      "title": "Kategorien",
+      "military": "Militärische UAS",
+      "agriculture": "Landwirtschaft",
+      "firefighting": "Feuerbekämpfung",
+      "isr": "ISR & Aufklärung",
+      "transport": "Transport",
+      "components": "Komponenten",
+      "viewAll": "Alle Produkte ansehen"
+    }
+  },
+  "solutions": {
+    "title": "Strategische Lösungen",
+    "subtitle": "Lieferung fortschrittlicher technologischer Integration für Landwirtschaft, globale Verteidigung und Notfallrettung.",
+    "label": "UNSERE EXPERTISE",
+    "pillarsTitle": "Unsere Kernbranchenpfeiler",
+    "pillarsDesc": "Rotarius bietet spezialisierte Lösungen in den anspruchsvollsten Umwelt- und Taktiksektoren.",
+    "readMore": "Weiterlesen",
+    "viewAll": "Alle Lösungen ansehen",
+    "megaMenu": {
+      "agroTitle": "Intelligente & Nachhaltige Landwirtschaft",
+      "militaryTitle": "Taktische Verteidigung & Überwachung",
+      "fireTitle": "Notfallrettung & Unterstützung"
+    },
+    "agro": {
+      "tag": "AGRO-ABTEILUNG",
+      "title": "Intelligente & Nachhaltige Landwirtschaft",
+      "description": "Befähigung der nächsten Generation von Landwirten mit autonomer Drohnentechnologie für präzise Anwendung und Bodenintelligenz.",
+      "features": [
+        { "title": "Präzisionssprühen", "desc": "Reduzieren Sie den Chemikalienverbrauch um bis zu 40 % mit gezielter Drohnenanwendungstechnologie." },
+        { "title": "Ertragsprognose", "desc": "KI-gestützte multispektrale Analyse zur Vorhersage der Pflanzengesundheit und des optimalen Erntezeitpunkts." },
+        { "title": "Bodenanalyse", "desc": "Tiefe Sensorintegration zur Überwachung von Nährstoffgehalten und Feuchtigkeit auf Ihrem gesamten Grundstück." }
+      ]
+    },
+    "military": {
+      "tag": "TAKTISCHE VERTEIDIGUNG",
+      "title": "Taktische Verteidigung & Überwachung",
+      "description": "Elektronische Kriegsführung und Tarnkappenaufklärungstechnologie im globalen Maßstab für die moderne operative Dominanz.",
+      "features": [
+        { "title": "Tarnkappentechnik", "desc": "Tarnkappen-UAV-Designs für Aufklärung in umkämpftem Luftraum mit minimalem Radarprofil." },
+        { "title": "Störschutz", "desc": "Robuste verschlüsselte Datenverbindungen zur Aufrechterhaltung der Kommunikation unter starker elektronischer Störung." },
+        { "title": "Grenzkontrolle", "desc": "Autonome 24/7-Perimeterüberwachung mit KI-gesteuerter Anomalieerkennung und Alarmsystemen." }
+      ]
+    },
+    "firefighting": {
+      "tag": "NOTFALLSYSTEME",
+      "title": "Notfallrettung & Unterstützung",
+      "description": "Schnelleinsatz-Drohnenschwärme für präzise Feuerbekämpfung und hochriskante Suche und Rettung in gefährlichem Gelände.",
+      "features": [
+        { "title": "Thermische Brandkartierung", "desc": "Echtzeit-Thermokartierung zur Wald- und Gebäudebrandbekämpfung." },
+        { "title": "Präzise Löschmittelabgabe", "desc": "Autonome Lieferung von hochvolumigem Feuerlöschmittel direkt zu Hotspots." },
+        { "title": "Suche & Rettung", "desc": "Dualspektralsensoren zum Auffinden vermisster Personen durch Rauch und dichte Umweltrückstände." }
+      ]
+    }
+  },
+  "history": {
+    "title": "Geschichte",
+    "label": "Unsere Geschichte",
+    "timelineTitle": "Vom Feld zum Fundament",
+    "timelineDesc": "Sieben Jahre Aufbau, Test und Einsatz unbemannter Systeme — gipfelnd in der Gründung von Rotarius.",
+    "philosophyLabel": "Unsere Philosophie",
+    "philosophyTitle": "Ökosystem, nicht nur Produkt",
+    "philosophyDesc1": "Bei Rotarius ist unsere Philosophie der Aufbau eines umfassenden UAV-Ökosystems — nicht nur eines eigenständigen Produkts. In einer sich schnell bewegenden Branche wie unbemannten Systemen reichen Produktionslinien und fertige Waren allein nicht aus.",
+    "philosophyDesc2": "Ein Ökosystem bedeutet, dass der gesamte Erstellungskreislauf unter einem Dach existiert. Jede Stufe hängt von jeder anderen ab — nur durch die gemeinsame Verwaltung aller Prozesse können wir die Ergebnisse liefern, die unsere Kunden erwarten.",
+    "ecosystemLabel": "Das Ökosystem",
+    "ecosystemTitle": "Vollzyklus-Fähigkeiten",
+    "ecosystemDesc": "Jede Abteilung ist miteinander verbunden — von F&E über Pilotenausbildung bis zum Felddienst. Ein Ökosystem, ein Standard.",
+    "solutionsLabel": "Lösungen",
+    "solutionsTitle": "Plattformen für jede Mission",
+    "componentsLabel": "Schlüsselkomponenten",
+    "componentsTitle": "Vertikale Integration",
+    "componentsDesc": "Wir montieren nicht nur Drohnen — wir fertigen die kritischen Komponenten, die sie zum Laufen bringen. Diese vertikale Integration gibt uns volle Kontrolle über Qualität, Leistung und Lieferkettenzuverlässigkeit.",
+    "learnMore": "Mehr erfahren",
+    "stats": {
+      "years": "Jahre Erfahrung",
+      "team": "Teammitglieder",
+      "units": "Einheiten jährlich produziert",
+      "offices": "Globale Büros"
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "sendMessage": "Schreiben Sie uns",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "Geschäfts-E-Mail",
+    "organization": "Organisation",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "selectSubject": "Betreff auswählen",
+    "subjects": {
+      "product": "Produktanfrage",
+      "partnership": "Partnerschaftsmöglichkeit",
+      "support": "Technischer Support",
+      "media": "Medienanfrage",
+      "careers": "Karrieremöglichkeiten",
+      "other": "Sonstiges"
+    },
+    "submit": "Anfrage senden",
+    "offices": "Unsere Büros",
+    "businessHours": "Geschäftszeiten",
+    "hours": {
+      "weekdays": "Montag - Freitag: 08:00 - 18:00 CET",
+      "weekends": "Samstag - Sonntag: Geschlossen",
+      "support": "24/7 Support für aktive Vertragshalter"
+    }
+  },
+  "newsPage": {
+    "title": "Nachrichten",
+    "featured": "Empfohlen",
+    "allNews": "Alle Nachrichten",
+    "readMore": "Weiterlesen"
+  },
+  "productDetail": {
+    "allProducts": "Alle Produkte",
+    "contactUs": "Kontaktieren Sie uns",
+    "technicalData": "Technische Daten",
+    "specifications": "Spezifikationen",
+    "nextProduct": "Nächstes Produkt"
+  },
+  "common": {
+    "required": "*",
+    "placeholder": "Bitte beschreiben Sie Ihre Anfrage..."
+  }
+}

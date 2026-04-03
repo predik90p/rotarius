@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "solutions": "Solutions",
+    "history": "History",
+    "contact": "Contact",
+    "getInTouch": "Get in Touch"
+  },
+  "hero": {
+    "categories": {
+      "agro": "Smart Agriculture",
+      "military": "Tactical Defense",
+      "firefighting": "Emergency Response"
+    },
+    "titles": {
+      "agro": "Future of Farming",
+      "military": "Precision Security",
+      "firefighting": "Thermal Resilience"
+    },
+    "descriptions": {
+      "agro": "VerdaAgro combines precision engineering with biological insights. Maximize yields with autonomous drone fleets and IoT sensor networks.",
+      "military": "Military-grade UAV systems designed for high-stakes reconnaissance and strategic superiority. Swiss-engineered reliability for global defense.",
+      "firefighting": "Next-generation firefighting drones with advanced thermal optics. Rapid deployment in high-temperature environments to save lives and forests."
+    },
+    "exploreSolutions": "Explore Solutions",
+    "learnTech": "Learn Tech",
+    "freeFly": "Free Fly",
+    "scanningSystems": "Scanning Systems",
+    "orbitalLabels": {
+      "agro": "AGRO",
+      "military": "MILITARY",
+      "firefighting": "FIREFIGHTING"
+    }
+  },
+  "info": {
+    "agro": {
+      "tag": "AGRICULTURAL SUPPORT",
+      "title": "Smart Farming for a Changing Planet",
+      "cards": [
+        {
+          "title": "Precision Crop Management",
+          "desc": "Autonomous drone fleets equipped with multispectral sensors for real-time crop health analysis and targeted treatment application."
+        },
+        {
+          "title": "Soil & Yield Analytics",
+          "desc": "Deep sensor integration to monitor nutrient levels, moisture, and predict optimal harvest windows across your entire estate."
+        },
+        {
+          "title": "Eco-Friendly Application",
+          "desc": "Reduce chemical waste by up to 40% with targeted drone spraying technology that protects biodiversity."
+        }
+      ]
+    },
+    "military": {
+      "tag": "TACTICAL DEFENSE",
+      "title": "Defense Intelligence & Reconnaissance",
+      "cards": [
+        {
+          "title": "Stealth Surveillance",
+          "desc": "Low-observable UAV designs for reconnaissance in contested airspace with minimal radar footprint."
+        },
+        {
+          "title": "Secure Communications",
+          "desc": "Resilient encrypted data links designed to maintain communication under heavy electronic jamming."
+        },
+        {
+          "title": "Border Monitoring",
+          "desc": "Autonomous 24/7 perimeter monitoring with AI-driven anomaly detection and alert systems."
+        }
+      ]
+    },
+    "firefighting": {
+      "tag": "EMERGENCY RESPONSE",
+      "title": "Firefighting & Rescue Operations",
+      "cards": [
+        {
+          "title": "Thermal Hotspot Detection",
+          "desc": "Real-time thermal mapping for forest and structure fire containment with AI-powered hotspot prediction."
+        },
+        {
+          "title": "Precision Suppression",
+          "desc": "Autonomous delivery of high-volume fire retardant material directly to hotspots with minimal collateral impact."
+        },
+        {
+          "title": "Search & Rescue",
+          "desc": "Dual spectral sensors to find missing persons through smoke and dense environmental debris."
+        }
+      ]
+    },
+    "readMore": "Read More"
+  },
+  "about": {
+    "title": "About Rotarius",
+    "description": "Swiss precision built on years of UAV expertise. Full-cycle drone manufacturing for agriculture, defense, and emergency response.",
+    "readAboutUs": "Read About Us"
+  },
+  "news": {
+    "label": "LATEST NEWS",
+    "title": "Explore Our Latest News & Tips",
+    "readMore": "Read More",
+    "items": [
+      {
+        "category": "Harvest",
+        "title": "Latest Updates in Global Agriculture",
+        "date": "AUGUST 18, 2025"
+      },
+      {
+        "category": "Agriculture",
+        "title": "How Technology Is Changing Agriculture",
+        "date": "AUGUST 18, 2025"
+      },
+      {
+        "category": "Agri-Tech",
+        "title": "Organic vs. Conventional Farming",
+        "date": "AUGUST 18, 2025"
+      }
+    ]
+  },
+  "footer": {
+    "readyToDiscuss": "Ready to Discuss?",
+    "readyText": "Our team is ready to help you find the right solution.",
+    "scheduleConsultation": "Schedule Consultation",
+    "viewSolutions": "View Solutions",
+    "description": "Swiss precision built on years of UAV expertise. Full-cycle drone manufacturing for agriculture, defense, and emergency response.",
+    "products": "Products",
+    "solutions": "Solutions",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "historyVision": "History & Vision",
+    "news": "News",
+    "contact": "Contact",
+    "agriculture": "Agriculture",
+    "defense": "Defense",
+    "emergency": "Emergency",
+    "allProducts": "All Products",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "exportCompliance": "Export Compliance",
+    "allRightsReserved": "All rights reserved."
+  },
+  "products": {
+    "title": "Products",
+    "categories": ["All", "Military", "Agriculture", "Emergency", "ISR", "Tactical"],
+    "viewSpecs": "View specs",
+    "nextProduct": "Next Product",
+    "dropdownCategories": {
+      "title": "Categories",
+      "military": "Military UAS",
+      "agriculture": "Agriculture",
+      "firefighting": "Firefighting",
+      "isr": "ISR & Reconnaissance",
+      "transport": "Transport",
+      "components": "Components",
+      "viewAll": "View All Products"
+    }
+  },
+  "productDetail": {
+    "allProducts": "All Products",
+    "contactUs": "Contact Us",
+    "technicalData": "Technical Data",
+    "specifications": "Specifications",
+    "nextProduct": "Next Product"
+  },
+  "solutions": {
+    "title": "Strategic Solutions",
+    "subtitle": "Delivering advanced technological integration for agriculture, global defense, and emergency response.",
+    "label": "OUR EXPERTISE",
+    "pillarsTitle": "Our Core Industry Pillars",
+    "pillarsDesc": "Rotarius provides specialized solutions across the most demanding environmental and tactical sectors.",
+    "readMore": "Read More",
+    "viewAll": "View All Solutions",
+    "megaMenu": {
+      "agroTitle": "Smart & Sustainable Agriculture",
+      "militaryTitle": "Tactical Defense & Surveillance",
+      "fireTitle": "Emergency Rescue & Support"
+    },
+    "agro": {
+      "tag": "AGRO DIVISION",
+      "title": "Smart & Sustainable Agriculture",
+      "description": "Empowering the next generation of farmers with autonomous drone technology for precision application and soil intelligence.",
+      "features": [
+        { "title": "Precision Spraying", "desc": "Reduce chemical waste by up to 40% with targeted drone application technology." },
+        { "title": "Yield Prediction", "desc": "AI-driven multispectral analysis to forecast crop health and peak harvest time." },
+        { "title": "Soil Analysis", "desc": "Deep sensor integration to monitor nutrient levels and moisture across your estate." }
+      ]
+    },
+    "military": {
+      "tag": "TACTICAL DEFENSE",
+      "title": "Tactical Defense & Surveillance",
+      "description": "Global-scale electronic warfare and stealth reconnaissance technology for modern operational dominance.",
+      "features": [
+        { "title": "Stealth Tech", "desc": "Low-observable UAV designs for reconnaissance in contested airspace with minimal radar footprint." },
+        { "title": "Jamming Defence", "desc": "Resilient encrypted data links designed to maintain communication under heavy electronic jamming." },
+        { "title": "Border Control", "desc": "Autonomous 24/7 perimeter monitoring with AI-driven anomaly detection and alert systems." }
+      ]
+    },
+    "firefighting": {
+      "tag": "EMERGENCY SYSTEMS",
+      "title": "Emergency Rescue & Support",
+      "description": "Rapid-response drone fleets for precision firefighting and high-stakes search & rescue in hazardous terrain.",
+      "features": [
+        { "title": "Thermal Fire Mapping", "desc": "Real-time thermal hotspot detection for forest and structure fire containment." },
+        { "title": "Precision Suppression", "desc": "Autonomous delivery of high-volume fire retardant material directly to hotspots." },
+        { "title": "Search & Rescue", "desc": "Dual spectral sensors to find missing persons through smoke and dense environmental debris." }
+      ]
+    }
+  },
+  "history": {
+    "title": "History",
+    "label": "Our History",
+    "timelineTitle": "From Field to Foundation",
+    "timelineDesc": "Seven years of building, testing, and deploying unmanned systems — culminating in the creation of Rotarius.",
+    "philosophyLabel": "Our Philosophy",
+    "philosophyTitle": "Ecosystem, Not Just Product",
+    "philosophyDesc1": "At Rotarius, our philosophy is building a comprehensive UAV ecosystem — not just a standalone product. In a fast-moving industry like unmanned systems, production lines and finished goods alone are not enough.",
+    "philosophyDesc2": "An ecosystem means the full creation cycle exists under one roof. Every stage depends on every other — only by managing all processes together can we deliver the results our clients expect.",
+    "ecosystemLabel": "The Ecosystem",
+    "ecosystemTitle": "Full-Cycle Capabilities",
+    "ecosystemDesc": "Every department is interconnected — from R&D to pilot training to field service. One ecosystem, one standard.",
+    "solutionsLabel": "Solutions",
+    "solutionsTitle": "Platforms for Every Mission",
+    "componentsLabel": "Key Components",
+    "componentsTitle": "Vertical Integration",
+    "componentsDesc": "We don't just assemble drones — we manufacture the critical components that make them work. This vertical integration gives us full control over quality, performance, and supply chain reliability.",
+    "learnMore": "Learn more",
+    "stats": {
+      "years": "Years of Experience",
+      "team": "Team Members",
+      "units": "Units Produced Annually",
+      "offices": "Global Offices"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "sendMessage": "Send us a Message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Business Email",
+    "organization": "Organization",
+    "subject": "Subject",
+    "message": "Message",
+    "selectSubject": "Select a subject",
+    "subjects": {
+      "product": "Product Inquiry",
+      "partnership": "Partnership Opportunity",
+      "support": "Technical Support",
+      "media": "Media Inquiry",
+      "careers": "Career Opportunities",
+      "other": "Other"
+    },
+    "submit": "Submit Inquiry",
+    "offices": "Our Offices",
+    "businessHours": "Business Hours",
+    "hours": {
+      "weekdays": "Monday - Friday: 08:00 - 18:00 CET",
+      "weekends": "Saturday - Sunday: Closed",
+      "support": "24/7 Support for active contract holders"
+    }
+  },
+  "newsPage": {
+    "title": "News",
+    "featured": "Featured",
+    "allNews": "All News",
+    "readMore": "Read more"
+  },
+  "productDetail": {
+    "allProducts": "All Products",
+    "contactUs": "Contact Us",
+    "technicalData": "Technical Data",
+    "specifications": "Specifications",
+    "nextProduct": "Next Product"
+  },
+  "common": {
+    "required": "*",
+    "placeholder": "Please describe your inquiry..."
+  }
+}

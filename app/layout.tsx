@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LocaleProvider } from '@/components/locale-provider'
 import './globals.css'
 
 const montserrat = Montserrat({ 
@@ -30,8 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-sans antialiased`}>
-        {children}
+      <body className={`${montserrat.variable} font-sans antialiased`} suppressHydrationWarning>
+        <LocaleProvider>
+          {children}
+        </LocaleProvider>
         <Analytics />
       </body>
     </html>

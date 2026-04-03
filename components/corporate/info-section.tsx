@@ -1,51 +1,9 @@
 "use client"
 
-import { ArrowRight, Leaf, Shield, Flame, Plus, ChevronRight } from "lucide-react"
+import { ArrowRight, Leaf, Shield, Flame, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-
-const INFO_DATA = [
-  {
-    tag: "AGRICULTURAL SUPPORT",
-    title: "Smart Farming for a Changing Planet",
-    mainImg: "/agricultural_field_sunset_background_1775123075962.png",
-    typeColor: '#22c55e',
-    link: '/solutions/agro',
-    subCards: [
-      { icon: Leaf, title: "Sustainability First", desc: "We prioritize eco-friendly practices that protect natural resources and ensure long-term productivity." },
-      { icon: Shield, title: "Farmer Approach", desc: "Every solution we offer is designed to support farmers — helping them increase yields and reduce risk." },
-      { icon: ArrowRight, title: "Innovation That Works", desc: "We embrace smart technologies and proven methods that bring efficiency, precision, and progress." }
-    ]
-  },
-  {
-    tag: "DEFENSE OPERATIONS",
-    title: "Tactical Superiority for Global Security",
-    mainImg: "/products/Pop-Fly-tactical-tube-launched-UAS.jpg",
-    typeColor: '#3b82f6',
-    link: '/solutions/military',
-    typeColor: '#3b82f6',
-    link: '/solutions/military',
-    subCards: [
-      { icon: Shield, title: "Stealth Command", desc: "Advanced low-observable technology ensures operational mission success in contested environments." },
-      { icon: ArrowRight, title: "Rapid Deployment", desc: "Our UAV systems can be deployed within minutes, providing immediate eyes in the sky." },
-      { icon: Leaf, title: "Encryption First", desc: "Military-grade data protection ensures all reconnaissance remains strictly confidential." }
-    ]
-  },
-  {
-    tag: "EMERGENCY RESPONSE",
-    title: "Precision Response for Saving Lives",
-    mainImg: "/firefighting_drone_background_1775123539157.png",
-    typeColor: '#f97316',
-    link: '/solutions/firefighting',
-    typeColor: '#f97316',
-    link: '/solutions/firefighting',
-    subCards: [
-      { icon: Flame, title: "Thermal Mapping", desc: "Real-time heat signature analysis to identify flare-ups before they spread beyond control." },
-      { icon: ArrowRight, title: "Suppressant Tech", desc: "Precision delivery of fire-retardant materials to critical hotspots with high-volume payloads." },
-      { icon: Leaf, title: "Eco-Containment", desc: "Monitoring disaster sites to prevent environmental secondary damage after the fire." }
-    ]
-  }
-]
+import { useLocale } from "@/components/locale-provider"
 
 interface InfoSectionProps {
   activeIdx: number;
@@ -53,6 +11,47 @@ interface InfoSectionProps {
 }
 
 export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
+  const { dict } = useLocale()
+
+  const INFO_DATA = [
+    {
+      tag: dict.info.agro.tag,
+      title: dict.info.agro.title,
+      mainImg: "/agricultural_field_sunset_background_1775123075962.png",
+      typeColor: '#22c55e',
+      link: '/solutions/agro',
+      subCards: dict.info.agro.cards.map((c: any, i: number) => ({
+        icon: [Leaf, Shield, ArrowRight][i],
+        title: c.title,
+        desc: c.desc,
+      }))
+    },
+    {
+      tag: dict.info.military.tag,
+      title: dict.info.military.title,
+      mainImg: "/products/Pop-Fly-tactical-tube-launched-UAS.jpg",
+      typeColor: '#3b82f6',
+      link: '/solutions/military',
+      subCards: dict.info.military.cards.map((c: any, i: number) => ({
+        icon: [Shield, ArrowRight, Leaf][i],
+        title: c.title,
+        desc: c.desc,
+      }))
+    },
+    {
+      tag: dict.info.firefighting.tag,
+      title: dict.info.firefighting.title,
+      mainImg: "/firefighting_drone_background_1775123539157.png",
+      typeColor: '#f97316',
+      link: '/solutions/firefighting',
+      subCards: dict.info.firefighting.cards.map((c: any, i: number) => ({
+        icon: [Flame, ArrowRight, Leaf][i],
+        title: c.title,
+        desc: c.desc,
+      }))
+    }
+  ]
+
   const data = INFO_DATA[activeIdx]
 
   return (
@@ -98,7 +97,7 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
               <Button asChild className="bg-stone-900 hover:bg-stone-800 text-white rounded-2xl px-10 py-8 text-md font-bold shadow-xl group">
                 <Link href={data.link} className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full" style={{ backgroundColor: data.typeColor }} />
-                  Read More
+                  {dict.info.readMore}
                 </Link>
               </Button>
             </div>
@@ -110,7 +109,7 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
 
           {/* Sub-cards Bottom Row (EXPANDED) */}
           <div className="grid md:grid-cols-3 gap-16 lg:gap-24 pt-16 border-t border-stone-200/60">
-            {data.subCards.map((card, idx) => (
+            {data.subCards.map((card: any, idx: number) => (
               <div
                 key={`${activeIdx}-${idx}`}
                 style={{ animationDelay: `${idx * 150}ms` }}
