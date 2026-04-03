@@ -13,13 +13,13 @@ export function AboutSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-12 z-10">
-        
+
         {/* Header */}
         <div className="grid lg:grid-cols-2 gap-12 items-end mb-16 lg:mb-24">
           <div>
             <span className="text-sm font-semibold tracking-widest uppercase text-white/60">Our Mission</span>
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-              Building a Global<br/>
+              Building a Global<br />
               UAV Ecosystem
             </h2>
           </div>
@@ -27,10 +27,9 @@ export function AboutSection() {
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               From R&D in Ukraine and Poland to global deployment, we manage the entire ecosystem of autonomous flight — production, testing, training, and service.
             </p>
-            <Button asChild className="bg-[#fdf2b1] hover:bg-[#f6e58d] text-black rounded-2xl px-8 py-6 font-bold shadow-xl shadow-black/10 transition-all hover:scale-105 active:scale-95">
-              <Link href="/contact" className="flex items-center gap-2">
-                Get in Touch
-                <ArrowRight className="w-4 h-4" />
+            <Button asChild className="bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl px-8 py-6 font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
+              <Link href="/history" className="flex items-center gap-2">
+                Read About Us
               </Link>
             </Button>
           </div>

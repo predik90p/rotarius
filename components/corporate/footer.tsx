@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone, Instagram, Twitter, Linkedin } from "lucide-react"
+import { Mail, MapPin, Phone, Instagram, Twitter, Linkedin, ArrowRight } from "lucide-react"
 
 const navigation = {
   products: [
@@ -10,7 +10,7 @@ const navigation = {
     { name: "Pop-Fly", href: "/products/pop-fly" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
+    { name: "About Us", href: "/history" },
     { name: "History & Vision", href: "/history" },
     { name: "News", href: "/news" },
     { name: "Contact", href: "/contact" },
@@ -27,8 +27,9 @@ export function Footer() {
   return (
     <footer className="bg-stone-900 text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-12">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block">
@@ -39,15 +40,15 @@ export function Footer() {
             </p>
             <div className="mt-8 space-y-3">
               <div className="flex items-center gap-3 text-sm text-white/50">
-                <MapPin className="h-4 w-4 flex-shrink-0 text-amber-400" />
+                <MapPin className="h-4 w-4 flex-shrink-0 text-white/30" />
                 <span>Zurich, Switzerland</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/50">
-                <Phone className="h-4 w-4 flex-shrink-0 text-amber-400" />
+                <Phone className="h-4 w-4 flex-shrink-0 text-white/30" />
                 <span>+41 44 123 45 67</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-white/50">
-                <Mail className="h-4 w-4 flex-shrink-0 text-amber-400" />
+                <Mail className="h-4 w-4 flex-shrink-0 text-white/30" />
                 <span>info@rotarius.com</span>
               </div>
             </div>
@@ -67,44 +68,61 @@ export function Footer() {
           </div>
 
           {/* Links Columns */}
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
-              <div>
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Products</h3>
-                <ul className="mt-6 space-y-3">
-                  {navigation.products.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm text-white/50 hover:text-amber-400 transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Solutions</h3>
-                <ul className="mt-6 space-y-3">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm text-white/50 hover:text-amber-400 transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-bold text-white uppercase tracking-wider">Company</h3>
-                <ul className="mt-6 space-y-3">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm text-white/50 hover:text-amber-400 transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="lg:col-span-5 grid grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">Products</h3>
+              <ul className="mt-6 space-y-3">
+                {navigation.products.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">Solutions</h3>
+              <ul className="mt-6 space-y-3">
+                {navigation.solutions.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white uppercase tracking-wider">Company</h3>
+              <ul className="mt-6 space-y-3">
+                {navigation.company.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm text-white/50 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* CTA Column */}
+          <div className="lg:col-span-3">
+            <h3 className="text-sm font-bold text-white uppercase tracking-wider">
+              Ready to Discuss?
+            </h3>
+            <p className="mt-4 text-sm text-white/50 leading-relaxed">
+              Our team is ready to help you find the right solution.
+            </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white text-stone-900 rounded-xl px-6 py-3 text-sm font-bold transition-all hover:scale-105 active:scale-95 shadow-xl">
+                Schedule Consultation
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+              <Link href="/solutions" className="inline-flex items-center justify-center gap-2 border border-white/20 text-white rounded-xl px-6 py-3 text-sm font-bold transition-all hover:bg-white/10 hover:scale-105 active:scale-95">
+                View Solutions
+              </Link>
             </div>
           </div>
         </div>

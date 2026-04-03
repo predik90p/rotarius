@@ -13,8 +13,8 @@ export function CTASection() {
               Ready to Discuss Your Requirements?
             </h2>
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed">
-              Our team of defense specialists is ready to help you find the right 
-              unmanned aerial solution for your mission. Contact us for a confidential 
+              Our team of defense specialists is ready to help you find the right
+              unmanned aerial solution for your mission. Contact us for a confidential
               consultation.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -25,7 +25,7 @@ export function CTASection() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                <Link href="/services">View Solutions</Link>
+                <Link href="/solutions">View Solutions</Link>
               </Button>
             </div>
           </div>
@@ -64,7 +64,7 @@ export function CTASection() {
               </div>
               <div className="mt-8 pt-6 border-t border-primary-foreground/10">
                 <p className="text-sm text-primary-foreground/60">
-                  All inquiries are handled with strict confidentiality. 
+                  All inquiries are handled with strict confidentiality.
                   Response within 24 business hours.
                 </p>
               </div>

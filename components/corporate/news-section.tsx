@@ -8,7 +8,8 @@ const NEWS_DATA = [
     title: "Latest Updates in Global Agriculture",
     date: "AUGUST 18, 2025",
     img: "/products/Kazhan-AGRO-30-agricultural-drone.jpg",
-    slug: "latest-updates-global-agriculture"
+    slug: "latest-updates-global-agriculture",
+    color: '#6b9e5a',
   },
   {
     id: 2,
@@ -16,7 +17,8 @@ const NEWS_DATA = [
     title: "How Technology Is Changing Agriculture",
     date: "AUGUST 18, 2025",
     img: "/agricultural_field_sunset_background_1775123075962.png",
-    slug: "technology-changing-agriculture"
+    slug: "technology-changing-agriculture",
+    color: '#5a8ab5',
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ const NEWS_DATA = [
     title: "Organic vs. Conventional Farming",
     date: "AUGUST 18, 2025",
     img: "/sunflower_seeds_card_1775131327383.png",
-    slug: "organic-vs-conventional-farming"
+    slug: "organic-vs-conventional-farming",
+    color: '#c47a5a',
   }
 ]
 
@@ -36,17 +39,17 @@ export function NewsSection() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16 lg:mb-24">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-stone-300">
-               <span className="text-[10px] font-bold tracking-[0.2em] text-stone-500 uppercase">LATEST NEWS</span>
+              <span className="text-[10px] font-bold tracking-[0.2em] text-stone-500 uppercase">LATEST NEWS</span>
             </div>
             <h2 className="text-5xl lg:text-7xl font-bold tracking-tight text-stone-900 leading-[1.1]">
-              Explore Our Latest <br/> News & Tips
+              Explore Our Latest <br /> News & Tips
             </h2>
           </div>
-          <Button asChild className="bg-[#8a9a7a] hover:bg-[#7a8a6a] text-white rounded-3xl px-10 py-8 font-bold flex items-center gap-3 transition-all hover:scale-105 shadow-xl shadow-stone-900/10 active:scale-95">
-             <Link href="/news">
-               <div className="w-1.5 h-1.5 rounded-full bg-white" />
-               Read More
-             </Link>
+          <Button asChild className="bg-stone-900 hover:bg-stone-800 text-white rounded-3xl px-10 py-8 font-bold flex items-center gap-3 transition-all hover:scale-105 shadow-xl active:scale-95">
+            <Link href="/news">
+              <div className="w-1.5 h-1.5 rounded-full bg-white/80" />
+              Read More
+            </Link>
           </Button>
         </div>
 
@@ -56,13 +59,13 @@ export function NewsSection() {
             <div key={item.id} className="group">
               {/* Image Container */}
               <Link href={`/news/${item.slug}`} className="block relative aspect-[4/3] rounded-[40px] overflow-hidden mb-8">
-                <img 
-                  src={item.img} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-6 left-6">
-                  <span className="inline-block px-4 py-2 bg-[#fdf2b1] text-stone-900 text-[11px] font-bold uppercase tracking-wider rounded-xl shadow-lg">
+                  <span className="inline-block px-4 py-2 text-white text-[11px] font-bold uppercase tracking-wider rounded-xl shadow-lg" style={{ backgroundColor: item.color }}>
                     {item.category}
                   </span>
                 </div>
@@ -77,8 +80,8 @@ export function NewsSection() {
                   {item.title}
                 </Link>
               </h3>
-              <Link 
-                href={`/news/${item.slug}`} 
+              <Link
+                href={`/news/${item.slug}`}
                 className="inline-flex items-center gap-2 text-stone-500 font-bold text-sm tracking-wide group/link hover:text-stone-900 transition-all"
               >
                 <div className="w-1.5 h-1.5 rounded-full bg-stone-300 group-hover/link:bg-[#8a9a7a] transition-colors" />

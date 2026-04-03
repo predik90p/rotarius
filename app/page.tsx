@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/corporate/hero-section"
 import { InfoSection } from "@/components/corporate/info-section"
 import { AboutSection } from "@/components/corporate/about-section"
 import { NewsSection } from "@/components/corporate/news-section"
-import { CTASection } from "@/components/corporate/cta-section"
 import { Footer } from "@/components/corporate/footer"
 
 export default function HomePage() {
@@ -35,19 +34,18 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <HeroSection 
-        activeIdx={activeHeroIdx} 
-        onIdxChange={handleHeroIdxChange} 
+      <HeroSection
+        activeIdx={activeHeroIdx}
+        onIdxChange={handleHeroIdxChange}
         isAuto={isAutoCycleActive}
         setIsAuto={setIsAutoCycleActive}
       />
-      <InfoSection 
+      <InfoSection
         activeIdx={activeInfoIdx}
         onIdxChange={handleInfoIdxChange}
       />
       <AboutSection />
       <NewsSection />
-      <CTASection />
       <Footer />
     </main>
   )

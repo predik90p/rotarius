@@ -10,25 +10,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'VerdaAgro | Premium Agricultural Solutions',
-  description: 'Smart farming and advanced agricultural technology solutions. Field monitoring, drone systems, and sustainable agriculture.',
-  generator: 'v0.app',
+  title: 'Rotarius | Swiss Precision UAV Solutions',
+  description: 'Full-cycle drone manufacturing for agriculture, defense, and emergency response. Swiss precision built on years of UAV expertise.',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/logo1fb.png',
+    apple: '/logo1fb.png',
+  },
+  openGraph: {
+    title: 'Rotarius | Swiss Precision UAV Solutions',
+    description: 'Full-cycle drone manufacturing for agriculture, defense, and emergency response.',
+    images: ['/logo1fb.png'],
   },
 }
 
