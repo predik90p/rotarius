@@ -9,9 +9,9 @@ export function AboutSection() {
   const { dict } = useLocale()
 
   return (
-    <section className="relative py-24 lg:py-32 bg-[#8a9a7a] overflow-hidden text-white">
+    <section className="relative py-24 lg:py-32 bg-primary overflow-hidden text-primary-foreground">
       {/* Subtle Background Text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap text-center pointer-events-none opacity-[0.04] select-none">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full whitespace-nowrap text-center pointer-events-none opacity-[0.06] select-none">
         <span className="text-[160px] lg:text-[280px] font-black uppercase tracking-tighter">
           Ecosystem
         </span>
@@ -22,17 +22,17 @@ export function AboutSection() {
         {/* Header */}
         <div className="grid lg:grid-cols-2 gap-12 items-end mb-16 lg:mb-24">
           <div>
-            <span className="text-sm font-semibold tracking-widest uppercase text-white/60">{dict.about.title}</span>
+            <span className="text-sm font-semibold tracking-widest uppercase opacity-60">{dict.about.title}</span>
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
               Building a Global<br />
               UAV Ecosystem
             </h2>
           </div>
           <div>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
+            <p className="opacity-70 text-lg leading-relaxed mb-8">
               {dict.about.description}
             </p>
-            <Button asChild className="bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl px-8 py-6 font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
+            <Button asChild className="bg-background text-foreground hover:bg-background/90 rounded-2xl px-8 py-6 font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
               <Link href="/history" className="flex items-center gap-2">
                 {dict.about.readAboutUs}
               </Link>

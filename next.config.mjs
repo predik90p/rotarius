@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: {
+    root: 'C:\\Users\\pavel\\OneDrive\\Desktop\\programisto\\Rotarius\\d2',
+    resolveExtensions: ['.tsx', '.ts', '.jsx', '.js'],
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

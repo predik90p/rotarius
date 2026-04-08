@@ -8,17 +8,17 @@ const NEWS_META = [
   {
     slug: "latest-updates-global-agriculture",
     img: "/products/Kazhan-AGRO-30-agricultural-drone.jpg",
-    color: '#6b9e5a',
+    color: '#71A58D',
   },
   {
     slug: "technology-changing-agriculture",
     img: "/agricultural_field_sunset_background_1775123075962.png",
-    color: '#5a8ab5',
+    color: '#1C5B68',
   },
   {
     slug: "organic-vs-conventional-farming",
     img: "/sunflower_seeds_card_1775131327383.png",
-    color: '#c47a5a',
+    color: '#F47A60',
   }
 ]
 
@@ -26,20 +26,20 @@ export function NewsSection() {
   const { dict } = useLocale()
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f8f7f2] font-sans">
+    <section className="py-24 lg:py-32 bg-background font-sans">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16 lg:mb-24">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-stone-300">
-              <span className="text-[10px] font-bold tracking-[0.2em] text-stone-500 uppercase">{dict.news.label}</span>
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full border border-border">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-muted-foreground uppercase">{dict.news.label}</span>
             </div>
-            <h2 className="text-5xl lg:text-7xl font-bold tracking-tight text-stone-900 leading-[1.1]">
+            <h2 className="text-5xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
               {dict.news.title.split("Latest")[0]}<br />{dict.news.title.split("Latest")[1] || dict.news.title}
             </h2>
           </div>
-          <Button asChild className="bg-stone-900 hover:bg-stone-800 text-white rounded-3xl px-10 py-8 font-bold flex items-center gap-3 transition-all hover:scale-105 shadow-xl active:scale-95">
+          <Button asChild className="bg-primary hover:opacity-90 text-primary-foreground rounded-3xl px-10 py-8 font-bold flex items-center gap-3 transition-all hover:scale-105 shadow-xl active:scale-95">
             <Link href="/news">
-              <div className="w-1.5 h-1.5 rounded-full bg-white/80" />
+              <div className="w-1.5 h-1.5 rounded-full bg-primary-foreground/80" />
               {dict.news.readMore}
             </Link>
           </Button>
@@ -63,19 +63,19 @@ export function NewsSection() {
                   </div>
                 </Link>
 
-                <p className="text-[11px] font-bold text-stone-400 uppercase tracking-[0.1em] mb-4">
+                <p className="text-[11px] font-bold text-muted-foreground opacity-60 uppercase tracking-[0.1em] mb-4">
                   {item.date}
                 </p>
-                <h3 className="text-2xl lg:text-3xl font-bold text-stone-900 mb-6 leading-[1.2] group-hover:text-[#8a9a7a] transition-colors">
+                <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-6 leading-[1.2] group-hover:text-primary transition-colors">
                   <Link href={`/news/${meta.slug}`}>
                     {item.title}
                   </Link>
                 </h3>
                 <Link
                   href={`/news/${meta.slug}`}
-                  className="inline-flex items-center gap-2 text-stone-500 font-bold text-sm tracking-wide group/link hover:text-stone-900 transition-all"
+                  className="inline-flex items-center gap-2 text-muted-foreground font-bold text-sm tracking-wide group/link hover:text-foreground transition-all"
                 >
-                  <div className="w-1.5 h-1.5 rounded-full bg-stone-300 group-hover/link:bg-[#8a9a7a] transition-colors" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-border group-hover/link:bg-primary transition-colors" />
                   {dict.news.readMore}
                 </Link>
               </div>

@@ -7,11 +7,6 @@ import { Button } from "@/components/ui/button"
 import { LanguageSwitcher } from "@/components/corporate/language-switcher"
 import { useLocale } from "@/components/locale-provider"
 
-const PRODUCTS_DATA = [
-  { name: "Kazhan E620", tag: "Strike UAS", img: "/products/Kazhan-E620-Strike-UAS.jpg", slug: "kazhan-e620" },
-  { name: "AGRO 30", tag: "Agriculture", img: "/products/Kazhan-AGRO-30-agricultural-drone.jpg", slug: "agro-30" },
-  { name: "Shmavik", tag: "ISR Scout", img: "/products/SHMAVIK-quadcopter-scout-drone.webp", slug: "shmavik" },
-]
 
 export function Header() {
   const { dict } = useLocale()
@@ -21,7 +16,7 @@ export function Header() {
 
   const navItems = [
     { key: "home" as const, href: "/", hasMega: false },
-    { key: "products" as const, href: "#", hasMega: true },
+    { key: "news" as const, href: "/news", hasMega: false },
     { key: "solutions" as const, href: "#", hasMega: true },
     { key: "history" as const, href: "/history", hasMega: false },
     { key: "contact" as const, href: "#", hasMega: true },
@@ -64,7 +59,7 @@ export function Header() {
                 href={item.hasMega ? "#" : item.href}
                 className={`flex items-center gap-1.5 px-5 py-2.5 text-sm font-medium transition-all rounded-full ${
                   activeMega === item.key
-                    ? "bg-white/15 text-white"
+                    ? "bg-primary text-primary-foreground"
                     : "text-white/70 hover:text-white hover:bg-white/5"
                 }`}
               >
@@ -77,43 +72,10 @@ export function Header() {
               {/* Mega Menu Overlay */}
               {activeMega === item.key && (
                 <div
-                  className="absolute top-[calc(100%+10px)] left-0 right-0 bg-[#f8f7f2] rounded-3xl shadow-2xl p-8 lg:p-12 animate-in fade-in slide-in-from-top-4 duration-300 border border-stone-200"
+                  className="absolute top-[calc(100%+10px)] left-0 right-0 bg-background text-foreground rounded-3xl shadow-2xl p-8 lg:p-12 animate-in fade-in slide-in-from-top-4 duration-300 border border-border"
                   onMouseEnter={() => handleMouseEnter(item.key)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  {item.key === "products" && (
-                    <div className="grid grid-cols-12 gap-8 text-black">
-                      <div className="col-span-3 border-r border-stone-200 pr-8">
-                        <h4 className="text-xl font-bold mb-6">{dict.products.dropdownCategories.title}</h4>
-                        <ul className="space-y-4 text-stone-500 font-medium">
-                          <li><Link href="/products?category=military" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.military}</Link></li>
-                          <li><Link href="/products?category=agriculture" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.agriculture}</Link></li>
-                          <li><Link href="/products?category=firefighting" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.firefighting}</Link></li>
-                          <li><Link href="/products?category=isr" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.isr}</Link></li>
-                          <li><Link href="/products?category=transport" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.transport}</Link></li>
-                          <li><Link href="/products?category=components" className="hover:text-stone-900 transition-colors">{dict.products.dropdownCategories.components}</Link></li>
-                        </ul>
-                        <Link
-                          href="/products"
-                          className="mt-8 inline-flex items-center gap-2 px-5 py-3 bg-stone-900 text-white text-sm font-semibold rounded-xl hover:bg-stone-800 transition-colors"
-                        >
-                          {dict.products.dropdownCategories.viewAll}
-                          <ArrowRight className="w-4 h-4" />
-                        </Link>
-                      </div>
-                      <div className="col-span-9 grid grid-cols-3 gap-6">
-                        {PRODUCTS_DATA.map((p) => (
-                          <Link key={p.slug} href={`/products/${p.slug}`} className="group/item">
-                            <div className="aspect-[4/5] bg-stone-50 rounded-3xl overflow-hidden mb-4 p-4 flex items-center justify-center">
-                              <img src={p.img} alt={p.name} className="w-full h-full object-contain group-hover/item:scale-110 transition-transform duration-500" />
-                            </div>
-                            <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">{p.tag}</span>
-                            <h5 className="font-bold text-lg mb-1">{p.name}</h5>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
 
                   {item.key === "contact" && (
                     <div className="grid grid-cols-12 gap-12 text-black">
@@ -151,7 +113,7 @@ export function Header() {
                           <div className="border-b border-stone-200 pb-2">
                             <textarea placeholder="Your Comment" className="w-full bg-transparent outline-none py-2 h-24 resize-none" />
                           </div>
-                          <Button className="bg-[#94a3b8] hover:bg-stone-500 text-white rounded-2xl px-10 py-7 font-bold">{dict.nav.getInTouch}</Button>
+                          <Button className="bg-primary hover:opacity-90 text-primary-foreground rounded-2xl px-10 py-7 font-bold">{dict.nav.getInTouch}</Button>
                         </div>
                       </div>
                       <div className="col-span-4 h-full min-h-[400px] bg-stone-100 rounded-[32px] overflow-hidden grayscale">
@@ -166,7 +128,7 @@ export function Header() {
                   {item.key === "solutions" && (
                     <div>
                       <div className="grid grid-cols-3 gap-12 text-black">
-                        <Link href="/solutions/agro" className="group/agro relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#fdf2b1]/60 hover:border-yellow-200/50 hover:-translate-y-4 transition-all duration-700">
+                        <Link href="/solutions/agro" className="group/agro relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#71A58D]/10 hover:border-[#71A58D]/30 hover:-translate-y-4 transition-all duration-700">
                           <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.agroTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
                           <ArrowRight className="w-6 h-6 transition-transform group-hover/agro:translate-x-2" />
                           <div className="absolute -bottom-10 -right-10 w-[120%] h-[60%]">
@@ -174,7 +136,7 @@ export function Header() {
                           </div>
                         </Link>
 
-                        <Link href="/solutions/military" className="group/mil relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-blue-50 hover:border-blue-200 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
+                        <Link href="/solutions/military" className="group/mil relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#1C5B68]/10 hover:border-[#1C5B68]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
                           <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.militaryTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
                           <ArrowRight className="w-6 h-6 transition-transform group-hover/mil:translate-x-2" />
                           <div className="absolute -bottom-10 -right-10 w-[120%] h-[60%] opacity-80">
@@ -182,7 +144,7 @@ export function Header() {
                           </div>
                         </Link>
 
-                        <Link href="/solutions/firefighting" className="group/fire relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-orange-50 hover:border-orange-200 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
+                        <Link href="/solutions/firefighting" className="group/fire relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#F47A60]/10 hover:border-[#F47A60]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
                           <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.fireTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
                           <ArrowRight className="w-6 h-6 transition-transform group-hover/fire:translate-x-2" />
                           <div className="absolute -bottom-10 -right-10 w-[110%] h-[60%] opacity-80">
@@ -193,7 +155,7 @@ export function Header() {
                       <div className="flex justify-center mt-12">
                         <Link
                           href="/solutions"
-                          className="inline-flex items-center gap-2 px-6 py-4 bg-stone-900 text-white text-sm font-semibold rounded-xl hover:bg-stone-800 transition-colors"
+                          className="inline-flex items-center gap-2 px-6 py-4 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity"
                         >
                           {dict.solutions.viewAll}
                           <ArrowRight className="w-4 h-4" />

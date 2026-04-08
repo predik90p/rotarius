@@ -1,12 +1,33 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { LocaleProvider } from '@/components/locale-provider'
 import './globals.css'
 
-const montserrat = Montserrat({ 
-  subsets: ["latin"],
-  variable: '--font-montserrat',
+const ttLakesNeue = localFont({
+  src: [
+    {
+      path: './fonts/TT-Lakes-Neue-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/TT-Lakes-Neue-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/TT-Lakes-Neue-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/TT-Lakes-Neue-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-tt-lakes',
   display: 'swap',
 });
 
@@ -30,8 +51,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.variable} font-sans antialiased`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${ttLakesNeue.variable} font-sans antialiased`}>
         <LocaleProvider>
           {children}
         </LocaleProvider>

@@ -8,7 +8,7 @@ import { useLocale } from "@/components/locale-provider"
 
 export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
   activeIdx: number
-  onIdxChange: (idx: number) => void
+  onIdxChange: React.Dispatch<React.SetStateAction<number>>
   isAuto: boolean
   setIsAuto: (auto: boolean) => void
 }) {
@@ -29,7 +29,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
       title: dict.hero.titles.agro,
       desc: dict.hero.descriptions.agro,
       image: '/products/Kazhan-AGRO-30-agricultural-drone.jpg',
-      typeColor: '#22c55e',
+      typeColor: '#71A58D',
       icon: Sprout,
     },
     {
@@ -38,7 +38,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
       title: dict.hero.titles.military,
       desc: dict.hero.descriptions.military,
       image: '/e630hd.png',
-      typeColor: '#3b82f6',
+      typeColor: '#1C5B68',
       icon: ShieldAlert,
     },
     {
@@ -47,7 +47,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
       title: dict.hero.titles.firefighting,
       desc: dict.hero.descriptions.firefighting,
       image: '/products/Kazhan-E630-Firefighter-Drone-1.webp',
-      typeColor: '#fb923c',
+      typeColor: '#F47A60',
       icon: Flame,
     }
   ]
@@ -70,8 +70,8 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
       </div>
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-[1]" />
-      <div className="absolute inset-0 bg-black/10 backdrop-blur-[2px] z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#010C0C]/90 via-[#010C0C]/50 to-transparent z-[1]" />
+      <div className="absolute inset-0 bg-[#010C0C]/20 backdrop-blur-[2px] z-[1]" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-32 z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -89,7 +89,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05]">
               Autonomous <br />
-              <span className="text-white">{current.title}</span>
+              <span style={{ color: current.typeColor }}>{current.title}</span>
             </h1>
 
             <p className="mt-8 text-xl text-white/80 leading-relaxed max-w-xl font-light">
@@ -100,19 +100,18 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
               <Button
                 asChild
                 size="lg"
-                className="bg-white/10 border border-white/20 text-white px-8 py-7 text-lg rounded-2xl group transition-all duration-500 hover:scale-105 hover:bg-white/15 active:scale-95 shadow-2xl backdrop-blur-md"
-                style={{ '--tc': current.typeColor } as React.CSSProperties & Record<string, string>}
+                className="bg-primary text-primary-foreground px-8 py-7 text-lg rounded-2xl group transition-all duration-500 hover:scale-105 hover:opacity-90 active:scale-95 shadow-2xl shadow-primary/20 backdrop-blur-md"
               >
                 <Link href={`/solutions/${current.id}`} className="flex items-center">
                   {dict.hero.exploreSolutions}
-                  <ArrowRight className="ml-3 h-5 w-5 transition-colors duration-300 text-white/70 group-hover:[color:var(--tc)] group-hover:translate-x-2" />
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
                 </Link>
               </Button>
               <Button
                 asChild
                 variant="outline"
                 size="lg"
-                className="bg-white/15 border-white/30 hover:bg-white/30 hover:border-white/60 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] text-white px-8 py-7 text-lg rounded-2xl transition-all backdrop-blur-md"
+                className="bg-white/10 border-white/20 hover:bg-white/20 hover:border-white/40 hover:scale-105 text-white px-8 py-7 text-lg rounded-2xl transition-all backdrop-blur-md"
               >
                 <Link href="/history">
                   {dict.hero.learnTech}
@@ -131,7 +130,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
 
               {/* Center Logo */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-40 h-40 rounded-full flex items-center justify-center bg-black/30 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden">
+                <div className="w-40 h-40 rounded-full flex items-center justify-center bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden">
                   <img src="/logof.png" alt="Branding" className="w-full h-full object-contain p-6" />
                 </div>
               </div>
