@@ -208,6 +208,46 @@ export function Header() {
           </button>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-x-4 top-28 bg-background rounded-3xl shadow-2xl border border-border p-6 z-50 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="flex flex-col gap-2">
+            {navItems.map((item) => (
+              <div key={item.key}>
+                {item.hasMega ? (
+                  <div className="space-y-2">
+                    <span className="block px-4 py-3 text-sm font-bold text-foreground uppercase tracking-wider">
+                      {dict.nav[item.key]}
+                    </span>
+                    {item.key === "solutions" && (
+                      <div className="grid grid-cols-2 gap-2 pl-4">
+                        <Link href="/solutions/commercial" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl bg-stone-50 text-sm font-semibold text-stone-700 hover:bg-[#71A58D]/10 transition-colors">Commercial</Link>
+                        <Link href="/solutions/defense" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl bg-stone-50 text-sm font-semibold text-stone-700 hover:bg-[#1C5B68]/10 transition-colors">Defense</Link>
+                        <Link href="/solutions/emergency" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl bg-stone-50 text-sm font-semibold text-stone-700 hover:bg-[#F47A60]/10 transition-colors">Emergency</Link>
+                        <Link href="/consulting" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 rounded-xl bg-stone-50 text-sm font-semibold text-stone-700 hover:bg-[#6366f1]/10 transition-colors">Consulting</Link>
+                      </div>
+                    )}
+                    {item.key === "contact" && (
+                      <div className="pl-4 space-y-2">
+                        <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block px-4 py-3 rounded-xl bg-stone-50 text-sm font-semibold text-stone-700 hover:bg-stone-100 transition-colors">Contact Page</Link>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-4 py-3 rounded-xl text-sm font-bold text-foreground hover:bg-stone-100 transition-colors"
+                  >
+                    {dict.nav[item.key]}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   )
 }

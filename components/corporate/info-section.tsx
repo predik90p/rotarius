@@ -67,7 +67,7 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
     <section className="py-24 bg-background overflow-hidden">
       <div className="mx-auto max-w-[1720px] px-6 lg:px-12 xl:px-20 flex relative">
 
-        {/* Left Vertical Selector (Timeline Style with Labels) */}
+        {/* Left Vertical Selector (Timeline Style with Labels) — Desktop Only */}
         <div className="hidden xl:flex flex-col items-center mr-32 gap-0">
           {[
             { name: "Commercial" },
@@ -96,6 +96,22 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
 
         {/* Main Content Area */}
         <div className="flex-1">
+          {/* Mobile Horizontal Tabs */}
+          <div className="flex xl:hidden gap-2 mb-8 overflow-x-auto pb-2">
+            {INFO_DATA.map((item, i) => (
+              <button
+                key={i}
+                onClick={() => onIdxChange(i)}
+                className={`flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${
+                  i === activeIdx
+                    ? "bg-foreground text-background border-foreground"
+                    : "bg-background text-muted-foreground border-border hover:border-foreground"
+                }`}
+              >
+                {item.tag}
+              </button>
+            ))}
+          </div>
           <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
             <div key={`header-${activeIdx}`} className="animate-in fade-in slide-in-from-left-8 duration-1000">
               <div className="inline-block px-4 py-1.5 mb-8 rounded-lg border border-border bg-background">
