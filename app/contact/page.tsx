@@ -1,10 +1,12 @@
 "use client"
 
+import { useActionState } from "react"
 import { Header } from "@/components/corporate/header"
 import { Footer } from "@/components/corporate/footer"
-import { Mail, Phone, MapPin, Clock, Building } from "lucide-react"
+import { Mail, Phone, MapPin, Clock, Building, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/components/locale-provider"
+import { submitContact } from "./actions"
 
 const offices = [
   {
@@ -26,6 +28,7 @@ const offices = [
 export default function ContactPage() {
   const { dict } = useLocale()
   const c = dict.contact
+  const [state, formAction, isPending] = useActionState(submitContact, null)
 
   return (
     <main className="min-h-screen bg-[#fcfcf9]">
@@ -47,7 +50,13 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-2xl font-bold text-stone-900 mb-8">{c.sendMessage}</h2>
-              <form className="space-y-6">
+              {state?.success && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3 text-green-800">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-medium">{state.message}</span>
+                </div>
+              )}
+              <form action={formAction} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-stone-500 mb-2">{c.firstName} *</label>
@@ -82,7 +91,9 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-stone-500 mb-2">{c.message} *</label>
                   <textarea id="message" name="message" rows={5} required className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-900 focus:border-transparent resize-none" placeholder={c.placeholder} />
                 </div>
-                <Button type="submit" size="lg" className="bg-stone-900 hover:bg-stone-800 text-white rounded-xl px-8 py-6 font-bold transition-all hover:scale-105 active:scale-95">{c.submit}</Button>
+                <Button type="submit" disabled={isPending} size="lg" className="bg-stone-900 hover:bg-stone-800 text-white rounded-xl px-8 py-6 font-bold transition-all hover:scale-105 active:scale-95 disabled:opacity-50">
+                  {isPending ? 'Sending...' : c.submit}
+                </Button>
               </form>
             </div>
 

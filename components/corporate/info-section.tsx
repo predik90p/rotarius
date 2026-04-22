@@ -1,9 +1,8 @@
 "use client"
 
-import { ArrowRight, Leaf, Shield, Flame, ChevronRight } from "lucide-react"
+import { ArrowRight, Sprout, Shield, Flame, Lightbulb, BarChart3, Target, Cpu, Users, Radio, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useLocale } from "@/components/locale-provider"
 
 interface InfoSectionProps {
   activeIdx: number;
@@ -11,45 +10,55 @@ interface InfoSectionProps {
 }
 
 export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
-  const { dict } = useLocale()
-
   const INFO_DATA = [
     {
-      tag: dict.info.agro.tag,
-      title: dict.info.agro.title,
-      mainImg: "/agricultural_field_sunset_background_1775123075962.png",
+      tag: "COMMERCIAL DIVISION",
+      title: "Commercial Solutions",
+      mainImg: "/products/Kazhan-AGRO-30-agricultural-drone.jpg",
       typeColor: '#71A58D',
-      link: '/solutions/agro',
-      subCards: dict.info.agro.cards.map((c: any, i: number) => ({
-        icon: [Leaf, Shield, ArrowRight][i],
-        title: c.title,
-        desc: c.desc,
-      }))
+      link: '/solutions/commercial',
+      subCards: [
+        { icon: Sprout, title: "Smart Agriculture", desc: "Autonomous drone fleets for precision spraying, crop monitoring, and yield analytics across large estates." },
+        { icon: Target, title: "Solar & Wind Infrastructure", desc: "Panel cleaning, turbine inspection, and predictive maintenance for renewable energy assets." },
+        { icon: Users, title: "Civil Pilot Training", desc: "Certified training programs for agricultural, inspection, and industrial drone operations." },
+      ]
     },
     {
-      tag: dict.info.military.tag,
-      title: dict.info.military.title,
+      tag: "DEFENSE DIVISION",
+      title: "Defense & Security",
       mainImg: "/products/Pop-Fly-tactical-tube-launched-UAS.jpg",
       typeColor: '#1C5B68',
-      link: '/solutions/military',
-      subCards: dict.info.military.cards.map((c: any, i: number) => ({
-        icon: [Shield, ArrowRight, Leaf][i],
-        title: c.title,
-        desc: c.desc,
-      }))
+      link: '/solutions/defense',
+      subCards: [
+        { icon: Shield, title: "Tactical Surveillance", desc: "Military-grade UAV systems for reconnaissance, border monitoring, and electronic warfare resilience." },
+        { icon: Target, title: "Combat Pilot School", desc: "Advanced certification for tactical drone operators in combat scenarios and mission-critical flights." },
+        { icon: BarChart3, title: "Defense Consulting", desc: "Advisory on UAV deployment for law enforcement and armed forces, including custom platform development." },
+      ]
     },
     {
-      tag: dict.info.firefighting.tag,
-      title: dict.info.firefighting.title,
-      mainImg: "/firefighting_drone_background_1775123539157.png",
+      tag: "EMERGENCY DIVISION",
+      title: "Emergency & Rescue",
+      mainImg: "/products/Kazhan-E630-Firefighter-Drone-1.webp",
       typeColor: '#F47A60',
-      link: '/solutions/firefighting',
-      subCards: dict.info.firefighting.cards.map((c: any, i: number) => ({
-        icon: [Flame, ArrowRight, Leaf][i],
-        title: c.title,
-        desc: c.desc,
-      }))
-    }
+      link: '/solutions/emergency',
+      subCards: [
+        { icon: Flame, title: "Fire Suppression", desc: "High-volume retardant delivery and thermal hotspot mapping for forest and structure fires." },
+        { icon: Radio, title: "Search & Rescue", desc: "Dual-spectral sensors to locate missing persons through smoke, debris, and low-visibility conditions." },
+        { icon: Wrench, title: "Emergency Comms", desc: "Temporary aerial communication relays and situational awareness for disaster response teams." },
+      ]
+    },
+    {
+      tag: "CONSULTING CENTER",
+      title: "Strategic Advisory",
+      mainImg: "/products/SHMAVIK-quadcopter-scout-drone.webp",
+      typeColor: '#6366f1',
+      link: '/consulting',
+      subCards: [
+        { icon: BarChart3, title: "UAV Strategy", desc: "End-to-end roadmaps for drone integration across agriculture, logistics, and defense operations." },
+        { icon: Cpu, title: "Components Advisory", desc: "Global manufacturer intelligence, component sourcing, and supply chain localization guidance." },
+        { icon: Wrench, title: "Custom Development", desc: "Specialized UAV platform design tailored to unique mission requirements and operational environments." },
+      ]
+    },
   ]
 
   const data = INFO_DATA[activeIdx]
@@ -61,9 +70,10 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
         {/* Left Vertical Selector (Timeline Style with Labels) */}
         <div className="hidden xl:flex flex-col items-center mr-32 gap-0">
           {[
-            { name: "Agro" },
-            { name: "Military" },
-            { name: "Rescue" }
+            { name: "Commercial" },
+            { name: "Defense" },
+            { name: "Emergency" },
+            { name: "Consulting" }
           ].map((theme, i) => (
             <div key={i} className="flex flex-col items-center group cursor-pointer relative" onClick={() => onIdxChange(i)}>
               {/* Vertical Label */}
@@ -76,7 +86,7 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
                 className={`w-3 h-3 rounded-full border-2 transition-all duration-500 ${i === activeIdx ? "bg-primary border-primary scale-150 shadow-lg" : "bg-background border-border group-hover:border-primary"
                   }`}
               />
-              {i < 2 && (
+              {i < 3 && (
                 <div className={`w-[1px] h-32 transition-colors duration-500 ${i < activeIdx ? "bg-primary" : "bg-border"}`} />
               )}
             </div>
@@ -97,7 +107,7 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
               <Button asChild className="bg-primary hover:opacity-90 text-primary-foreground rounded-2xl px-10 py-8 text-md font-bold shadow-xl group">
                 <Link href={data.link} className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full" style={{ backgroundColor: data.typeColor }} />
-                  {dict.info.readMore}
+                  Explore Division
                 </Link>
               </Button>
             </div>
@@ -107,23 +117,26 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
             </div>
           </div>
 
-          {/* Sub-cards Bottom Row (EXPANDED) */}
+          {/* Sub-cards Bottom Row */}
           <div className="grid md:grid-cols-3 gap-16 lg:gap-24 pt-16 border-t border-border/60">
-            {data.subCards.map((card: any, idx: number) => (
-              <div
-                key={`${activeIdx}-${idx}`}
-                style={{ animationDelay: `${idx * 150}ms` }}
-                className="animate-in fade-in slide-in-from-bottom-8 duration-700"
-              >
-                <div className="mb-6 p-3 rounded-2xl bg-secondary/10 w-fit">
-                  <card.icon className="w-8 h-8 text-primary" />
+            {data.subCards.map((card: any, idx: number) => {
+              const Icon = card.icon
+              return (
+                <div
+                  key={`${activeIdx}-${idx}`}
+                  style={{ animationDelay: `${idx * 150}ms` }}
+                  className="animate-in fade-in slide-in-from-bottom-8 duration-700"
+                >
+                  <div className="mb-6 p-3 rounded-2xl bg-secondary/10 w-fit">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-foreground mb-4">{card.title}</h4>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    {card.desc}
+                  </p>
                 </div>
-                <h4 className="text-2xl font-bold text-foreground mb-4">{card.title}</h4>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                  {card.desc}
-                </p>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
 

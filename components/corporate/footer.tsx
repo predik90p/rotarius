@@ -22,9 +22,10 @@ export function Footer() {
       { name: dict.footer.contact, href: "/contact" },
     ],
     solutions: [
-      { name: dict.footer.agriculture, href: "/solutions/agro" },
-      { name: dict.footer.defense, href: "/solutions/military" },
-      { name: dict.footer.emergency, href: "/solutions/firefighting" },
+      { name: "Commercial Division", href: "/solutions/commercial" },
+      { name: "Defense Division", href: "/solutions/defense" },
+      { name: "Emergency Division", href: "/solutions/emergency" },
+      { name: "Consulting Center", href: "/consulting" },
       { name: dict.footer.allProducts, href: "/products" },
     ],
   }

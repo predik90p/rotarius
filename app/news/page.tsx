@@ -3,13 +3,14 @@ import Link from "next/link"
 import { Header } from "@/components/corporate/header"
 import { Footer } from "@/components/corporate/footer"
 import { ArrowRight } from "lucide-react"
+import { getPayloadClient } from "@/lib/payload"
 
 export const metadata: Metadata = {
   title: "News & Updates | Rotarius",
   description: "Latest news, press releases, and updates from Rotarius.",
 }
 
-const news = [
+const fallbackNews = [
   { id: "ad-7x-launch", category: "Product Launch", title: "Introducing the AD-7X Long-Range Surveillance Platform", excerpt: "Our latest surveillance drone offers unprecedented 48-hour flight endurance with advanced sensor integration.", date: "March 15, 2026", featured: true, color: '#1C5B68' },
   { id: "edc-partnership", category: "Partnership", title: "Strategic Alliance with European Defense Consortium", excerpt: "Rotarius joins forces with leading defense contractors to develop next-generation autonomous systems.", date: "March 8, 2026", featured: true, color: '#F47A60' },
   { id: "nato-certification", category: "Certification", title: "NATO STANAG 4671 Certification Achieved", excerpt: "Our UAV systems now meet the highest NATO airworthiness standards for unmanned aircraft.", date: "February 28, 2026", featured: false, color: '#1C5B68' },
@@ -20,7 +21,41 @@ const news = [
   { id: "sustainability", category: "Sustainability", title: "Carbon-Neutral Manufacturing Initiative Launched", excerpt: "Commitment to achieving carbon-neutral production by 2028 through renewable energy.", date: "December 1, 2025", featured: false, color: '#71A58D' },
 ]
 
-export default function NewsPage() {
+function formatDate(dateString: string | Date): string {
+  if (typeof dateString === 'string') return dateString
+  return new Date(dateString).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+}
+
+export default async function NewsPage() {
+  let news = fallbackNews
+
+  try {
+    const payload = await getPayloadClient()
+    const result = await payload.find({
+      collection: 'news',
+      sort: '-date',
+    })
+
+    if (result.docs.length > 0) {
+      news = result.docs.map((doc: any) => ({
+        id: doc.slug,
+        slug: doc.slug,
+        category: doc.category || 'News',
+        title: doc.title || '',
+        excerpt: doc.excerpt || '',
+        date: formatDate(doc.date),
+        featured: false,
+        color: '#1C5B68',
+      }))
+    }
+  } catch {
+    // Fallback to static data
+  }
+
   const featuredNews = news.filter((item) => item.featured)
   const regularNews = news.filter((item) => !item.featured)
 
@@ -33,31 +68,33 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <section className="py-16 border-t border-border/60">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-8">Featured</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {featuredNews.map((item) => (
-              <Link key={item.id} href={`/news/${item.id}`} className="group bg-white rounded-[40px] border border-border/20 overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
-                <div className="aspect-[16/9] bg-muted/20 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: item.color + '15' }}>
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
+      {featuredNews.length > 0 && (
+        <section className="py-16 border-t border-border/60">
+          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-8">Featured</h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {featuredNews.map((item) => (
+                <Link key={item.id} href={`/news/${item.id}`} className="group bg-white rounded-[40px] border border-border/20 overflow-hidden hover:-translate-y-2 hover:shadow-xl transition-all duration-500">
+                  <div className="aspect-[16/9] bg-muted/20 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: item.color + '15' }}>
+                      <div className="w-3 h-3 rounded-full" style={{ backgroundColor: item.color }} />
+                    </div>
                   </div>
-                </div>
-                <div className="p-8">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full text-[11px] font-bold uppercase tracking-wider" style={{ backgroundColor: item.color + '15', color: item.color }}>{item.category}</div>
-                  <h3 className="text-2xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="mt-4 text-muted-foreground leading-relaxed">{item.excerpt}</p>
-                  <div className="mt-6 flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground opacity-60">{item.date}</span>
-                    <span className="text-sm font-semibold text-muted-foreground group-hover:text-primary flex items-center gap-2 transition-colors">Read more <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></span>
+                  <div className="p-8">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full text-[11px] font-bold uppercase tracking-wider" style={{ backgroundColor: item.color + '15', color: item.color }}>{item.category}</div>
+                    <h3 className="text-2xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">{item.title}</h3>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">{item.excerpt}</p>
+                    <div className="mt-6 flex items-center justify-between">
+                      <span className="text-sm text-muted-foreground opacity-60">{item.date}</span>
+                      <span className="text-sm font-semibold text-muted-foreground group-hover:text-primary flex items-center gap-2 transition-colors">Read more <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">

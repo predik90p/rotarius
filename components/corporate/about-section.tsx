@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { useLocale } from "@/components/locale-provider"
 
-export function AboutSection() {
+export function AboutSection({ payloadAbout }: { payloadAbout?: { title?: string; description?: string; buttonText?: string } }) {
   const { dict } = useLocale()
 
   return (
@@ -24,17 +24,17 @@ export function AboutSection() {
           <div>
             <span className="text-sm font-semibold tracking-widest uppercase opacity-60">{dict.about.title}</span>
             <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-              Building a Global<br />
-              UAV Ecosystem
+              {payloadAbout?.title || 'Building a Global'}<br />
+              {payloadAbout?.title ? '' : 'UAV Ecosystem'}
             </h2>
           </div>
           <div>
             <p className="opacity-70 text-lg leading-relaxed mb-8">
-              {dict.about.description}
+              {payloadAbout?.description || dict.about.description}
             </p>
             <Button asChild className="bg-background text-foreground hover:bg-background/90 rounded-2xl px-8 py-6 font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
               <Link href="/history" className="flex items-center gap-2">
-                {dict.about.readAboutUs}
+                {payloadAbout?.buttonText || dict.about.readAboutUs}
               </Link>
             </Button>
           </div>

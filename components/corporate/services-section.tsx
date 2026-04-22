@@ -2,33 +2,42 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
-const STATIC_SERVICES = [
-  { 
+const HUB_CARDS = [
+  {
     id: "01",
-    tag: "FARM SOLUTIONS",
-    title: "Industrial Agriculture", 
-    desc: "Autonomous drone fleets for targeted, eco-friendly application of crop protection agents and seeds.",
-    img: "/products/Kazhan-AGRO-30-agricultural-drone.jpg",
-    link: "/solutions/agro",
-    typeColor: '#22c55e',
+    tag: "COMMERCIAL",
+    title: "Commercial Division",
+    desc: "Agriculture, solar, wind, crane operations, civil pilot training, and logistics strategy.",
+    img: "/products/agro-drone-transparent.png",
+    link: "/solutions/commercial",
+    typeColor: '#71A58D',
   },
-  { 
+  {
     id: "02",
-    tag: "TACTICAL DEFENSE",
-    title: "Defense Intelligence", 
-    desc: "Military-grade UAV systems designed for high-stakes reconnaissance and strategic superiority.",
-    img: "/products/Kazhan-E620-Strike-UAS.jpg",
-    link: "/solutions/military",
-    typeColor: '#3b82f6',
+    tag: "DEFENSE",
+    title: "Defense Division",
+    desc: "Tactical surveillance, combat pilot school, and defense consulting for law enforcement and armed forces.",
+    img: "/products/e620-transparent.png",
+    link: "/solutions/defense",
+    typeColor: '#1C5B68',
   },
-  { 
+  {
     id: "03",
-    tag: "EMERGENCY OPS",
-    title: "Emergency Systems", 
-    desc: "Next-generation firefighting drones with advanced thermal optics and suppressant delivery.",
-    img: "/products/Kazhan-E630-Firefighter-Drone-1.webp",
-    link: "/solutions/firefighting",
-    typeColor: '#f97316',
+    tag: "EMERGENCY",
+    title: "Emergency Division",
+    desc: "Firefighting drones, search & rescue systems, and emergency communications platforms.",
+    img: "/products/e630-transparent.png",
+    link: "/solutions/emergency",
+    typeColor: '#F47A60',
+  },
+  {
+    id: "04",
+    tag: "CONSULTING",
+    title: "Consulting Center",
+    desc: "UAV application strategy, components advisory, supply chain consulting, and custom development.",
+    img: "/products/e620-transparent.png",
+    link: "/consulting",
+    typeColor: '#6366f1',
   }
 ]
 
@@ -39,32 +48,32 @@ export function ServicesSection() {
         {/* Compact Heading */}
         <div className="mb-12 text-center max-w-2xl mx-auto">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-900 leading-tight">
-            Our Core <span className="text-stone-400">Industry</span> Pillars
+            Our Core <span className="text-stone-400">Divisions</span>
           </h2>
           <p className="mt-4 text-stone-500 text-lg">
-            Rotarius provides specialized solutions across the most demanding environmental and tactical sectors.
+            Rotarius provides specialized solutions across commercial, defense, and emergency sectors — backed by a dedicated consulting practice.
           </p>
         </div>
 
-        {/* Static Capabilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {STATIC_SERVICES.map((card) => (
+        {/* Hub Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {HUB_CARDS.map((card) => (
             <Link
               key={card.id}
               href={card.link}
-              className="group relative h-[500px] bg-white rounded-[48px] border border-stone-100 overflow-hidden transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl"
+              className="group relative h-[420px] bg-white rounded-[48px] border border-stone-100 overflow-hidden transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl"
             >
               <div className="p-10 h-full flex flex-col items-start">
                 <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-stone-200 bg-white">
                   <span className="w-2 h-2 rounded-full" style={{ backgroundColor: card.typeColor }} />
                   <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider">{card.tag}</span>
                 </div>
-                
-                <h3 className="text-3xl font-bold text-stone-900 leading-tight max-w-[180px] mb-6">
+
+                <h3 className="text-3xl font-bold text-stone-900 leading-tight max-w-[240px] mb-6">
                   {card.title}
                 </h3>
-                
-                <p className="text-stone-500 line-clamp-3 mb-8">
+
+                <p className="text-stone-500 line-clamp-3 mb-8 max-w-sm">
                   {card.desc}
                 </p>
 
@@ -72,9 +81,9 @@ export function ServicesSection() {
                   Read More
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
-                
+
                 {/* Visual Image */}
-                <div className="absolute -bottom-10 -right-10 w-[110%] h-[55%] transition-transform duration-1000 group-hover:scale-110 pointer-events-none">
+                <div className="absolute -bottom-10 -right-10 w-[60%] h-[55%] transition-transform duration-1000 group-hover:scale-110 pointer-events-none">
                   <img src={card.img} alt={card.title} className="w-full h-full object-contain object-bottom-right" />
                 </div>
               </div>

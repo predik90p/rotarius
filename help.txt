@@ -1,0 +1,1 @@
+ if a person click the page will appear and there we will see ( Our Core Industry Pillars section so move it from gome page to a new page ) and when user click on selected topic a page with more inforamtion about this topic will appear) 

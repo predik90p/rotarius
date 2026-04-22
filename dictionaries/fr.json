@@ -11,17 +11,26 @@
     "categories": {
       "agro": "Agriculture Intelligente",
       "military": "Défense Tactique",
-      "firefighting": "Intervention d'Urgence"
+      "firefighting": "Intervention d'Urgence",
+      "solar": "Énergie Solaire",
+      "cranes": "Opérations Hivernales",
+      "wind": "Énergie Éolienne"
     },
     "titles": {
       "agro": "L'Avenir de l'Agriculture",
       "military": "Sécurité de Précision",
-      "firefighting": "Résistance Thermique"
+      "firefighting": "Résistance Thermique",
+      "solar": "Maintenance des Énergies Propres",
+      "cranes": "Opérations de Grues par Froid",
+      "wind": "Installation d'Énergies Renouvelables"
     },
     "descriptions": {
       "agro": "VerdaAgro combine l'ingénierie de précision avec des connaissances biologiques. Maximisez les rendements avec des flottes de drones autonomes et des réseaux de capteurs IoT.",
       "military": "Systèmes UAV de qualité militaire conçus pour la reconnaissance à haut risque et la supériorité stratégique. Fiabilité suisse pour la défense mondiale.",
-      "firefighting": "Drones de lutte contre les incendies de nouvelle génération avec optique thermique avancée. Déploiement rapide dans des environnements à haute température pour sauver des vies et des forêts."
+      "firefighting": "Drones de lutte contre les incendies de nouvelle génération avec optique thermique avancée. Déploiement rapide dans des environnements à haute température pour sauver des vies et des forêts.",
+      "solar": "Solutions de drones autonomes pour le nettoyage et l'inspection efficaces des panneaux solaires, maximisant la production d'énergie et prolongeant la durée de vie.",
+      "cranes": "Support UAV spécialisé pour les opérations de grues Liebherr dans des conditions hivernales extrêmes, assurant sécurité et précision.",
+      "wind": "Systèmes de drones avancés pour l'installation et la maintenance des éoliennes, réduisant les temps d'arrêt et les coûts opérationnels."
     },
     "exploreSolutions": "Découvrir les Solutions",
     "learnTech": "Découvrir la Technologie",
@@ -30,7 +39,10 @@
     "orbitalLabels": {
       "agro": "AGRO",
       "military": "MILITAIRE",
-      "firefighting": "POMPIERS"
+      "firefighting": "POMPIERS",
+      "solar": "SOLAIRE",
+      "cranes": "GRUES",
+      "wind": "ÉOLIEN"
     }
   },
   "info": {
@@ -88,6 +100,60 @@
         }
       ]
     },
+    "solar": {
+      "tag": "MAINTENANCE SOLAIRE",
+      "title": "Nettoyage & Inspection Solaire",
+      "cards": [
+        {
+          "title": "Nettoyage Automatisé de Panneaux",
+          "desc": "Systèmes de nettoyage montés sur drone qui éliminent la poussière et les débris des panneaux solaires sans gaspillage d'eau ni travail manuel."
+        },
+        {
+          "title": "Scan Thermique de Performance",
+          "desc": "Analyse infrarouge pour détecter les cellules sous-performantes, les points chauds et les défauts électriques sur de grandes fermes solaires."
+        },
+        {
+          "title": "Maintenance Prédictive",
+          "desc": "Planification pilotée par l'IA basée sur les modèles météorologiques et les taux d'encrassement pour optimiser les cycles de nettoyage."
+        }
+      ]
+    },
+    "cranes": {
+      "tag": "OPÉRATIONS HIVERNALES",
+      "title": "Support Grues Liebherr en Hiver",
+      "cards": [
+        {
+          "title": "Détection de Givrage",
+          "desc": "Inspection par UAV des flèches et câbles de grue pour détecter l'accumulation de glace pouvant compromettre l'intégrité structurelle."
+        },
+        {
+          "title": "Levés par Temps Froid",
+          "desc": "Évaluations rapides de chantier dans la neige et des conditions de faible visibilité pour assurer des opérations de levage sûres."
+        },
+        {
+          "title": "Surveillance d'Équipement",
+          "desc": "Contrôles thermiques et visuels des systèmes hydrauliques et moteurs pour prévenir les pannes par grand froid."
+        }
+      ]
+    },
+    "wind": {
+      "tag": "ÉNERGIE RENOUVELABLE",
+      "title": "Installation & Service d'Éoliennes",
+      "cards": [
+        {
+          "title": "Inspection de Pales",
+          "desc": "Imagerie haute résolution et scan LiDAR pour détecter fissures, érosion et dommages par la foudre sur les pales d'éoliennes."
+        },
+        {
+          "title": "Support d'Installation",
+          "desc": "Levés précis par drone et livraison de charges pour assister les techniciens lors de l'assemblage et de la mise en service."
+        },
+        {
+          "title": "Logistique Offshore",
+          "desc": "Missions d'approvisionnement autonomes et vols d'inspection pour les parcs éoliens offshore dans des conditions maritimes difficiles."
+        }
+      ]
+    },
     "readMore": "Lire la Suite"
   },
   "about": {
@@ -133,6 +199,9 @@
     "agriculture": "Agriculture",
     "defense": "Défense",
     "emergency": "Urgence",
+    "solar": "Panneaux Solaires",
+    "cranes": "Grues Liebherr",
+    "wind": "Éoliennes",
     "allProducts": "Tous les Produits",
     "privacyPolicy": "Politique de Confidentialité",
     "termsOfService": "Conditions d'Utilisation",
@@ -166,7 +235,10 @@
     "megaMenu": {
       "agroTitle": "Agriculture Intelligente & Durable",
       "militaryTitle": "Défense Tactique & Surveillance",
-      "fireTitle": "Secours d'Urgence & Support"
+      "fireTitle": "Secours d'Urgence & Support",
+      "solarTitle": "Nettoyage & Inspection Solaire",
+      "cranesTitle": "Opérations de Grues en Hiver",
+      "windTitle": "Installation d'Éoliennes"
     },
     "agro": {
       "tag": "DIVISION AGRO",
@@ -196,6 +268,36 @@
         { "title": "Cartographie Thermique des Incendies", "desc": "Détection en temps réel des points chauds thermiques pour la lutte contre les incendies de forêt et de structure." },
         { "title": "Suppression de Précision", "desc": "Livraison autonome de matériaux ignifuges à haut volume directement aux points chauds." },
         { "title": "Recherche & Sauvetage", "desc": "Capteurs à double spectre pour trouver des personnes disparues à travers la fumée et les débris environnementaux denses." }
+      ]
+    },
+    "solar": {
+      "tag": "MAINTENANCE SOLAIRE",
+      "title": "Nettoyage & Inspection Solaire",
+      "description": "Solutions de drones autonomes pour le nettoyage et l'inspection efficaces des panneaux solaires, maximisant la production d'énergie et prolongeant la durée de vie.",
+      "features": [
+        { "title": "Nettoyage Automatisé de Panneaux", "desc": "Systèmes de nettoyage montés sur drone qui éliminent la poussière et les débris des panneaux solaires sans gaspillage d'eau ni travail manuel." },
+        { "title": "Scan Thermique de Performance", "desc": "Analyse infrarouge pour détecter les cellules sous-performantes, les points chauds et les défauts électriques sur de grandes fermes solaires." },
+        { "title": "Maintenance Prédictive", "desc": "Planification pilotée par l'IA basée sur les modèles météorologiques et les taux d'encrassement pour optimiser les cycles de nettoyage." }
+      ]
+    },
+    "cranes": {
+      "tag": "OPÉRATIONS HIVERNALES",
+      "title": "Support Grues Liebherr en Hiver",
+      "description": "Support UAV spécialisé pour les opérations de grues Liebherr dans des conditions hivernales extrêmes, assurant sécurité et précision.",
+      "features": [
+        { "title": "Détection de Givrage", "desc": "Inspection par UAV des flèches et câbles de grue pour détecter l'accumulation de glace pouvant compromettre l'intégrité structurelle." },
+        { "title": "Levés par Temps Froid", "desc": "Évaluations rapides de chantier dans la neige et des conditions de faible visibilité pour assurer des opérations de levage sûres." },
+        { "title": "Surveillance d'Équipement", "desc": "Contrôles thermiques et visuels des systèmes hydrauliques et moteurs pour prévenir les pannes par grand froid." }
+      ]
+    },
+    "wind": {
+      "tag": "ÉNERGIE RENOUVELABLE",
+      "title": "Installation & Service d'Éoliennes",
+      "description": "Systèmes de drones avancés pour l'installation et la maintenance des éoliennes, réduisant les temps d'arrêt et les coûts opérationnels.",
+      "features": [
+        { "title": "Inspection de Pales", "desc": "Imagerie haute résolution et scan LiDAR pour détecter fissures, érosion et dommages par la foudre sur les pales d'éoliennes." },
+        { "title": "Support d'Installation", "desc": "Levés précis par drone et livraison de charges pour assister les techniciens lors de l'assemblage et de la mise en service." },
+        { "title": "Logistique Offshore", "desc": "Missions d'approvisionnement autonomes et vols d'inspection pour les parcs éoliens offshore dans des conditions maritimes difficiles." }
       ]
     }
   },

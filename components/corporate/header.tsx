@@ -127,32 +127,60 @@ export function Header() {
 
                   {item.key === "solutions" && (
                     <div>
-                      <div className="grid grid-cols-3 gap-12 text-black">
-                        <Link href="/solutions/agro" className="group/agro relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#71A58D]/10 hover:border-[#71A58D]/30 hover:-translate-y-4 transition-all duration-700">
-                          <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.agroTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
-                          <ArrowRight className="w-6 h-6 transition-transform group-hover/agro:translate-x-2" />
-                          <div className="absolute -bottom-10 -right-10 w-[120%] h-[60%]">
-                            <img src="/products/agro-drone-transparent.png" alt="Agro" className="w-full h-full object-contain" />
+                      <div className="grid grid-cols-2 gap-6 text-black">
+                        <Link href="/solutions/commercial" className="group/com relative h-[260px] bg-white/70 rounded-3xl overflow-hidden p-6 flex flex-col items-start border border-stone-200 hover:bg-[#71A58D]/10 hover:border-[#71A58D]/30 hover:-translate-y-4 transition-all duration-700">
+                          <div className="inline-flex items-center gap-2 px-2 py-0.5 mb-3 rounded-full border border-stone-200 bg-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#71A58D]" />
+                            <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">Division</span>
+                          </div>
+                          <h4 className="text-xl font-black leading-[1.1] mb-3">Commercial<br/>Division</h4>
+                          <p className="text-xs text-stone-500 max-w-[200px]">Agriculture, solar, wind, logistics & civil training.</p>
+                          <ArrowRight className="w-5 h-5 mt-auto transition-transform group-hover/com:translate-x-2" />
+                          <div className="absolute -bottom-6 -right-6 w-[50%] h-[55%]">
+                            <img src="/products/agro-drone-transparent.png" alt="Commercial" className="w-full h-full object-contain" />
                           </div>
                         </Link>
 
-                        <Link href="/solutions/military" className="group/mil relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#1C5B68]/10 hover:border-[#1C5B68]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
-                          <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.militaryTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
-                          <ArrowRight className="w-6 h-6 transition-transform group-hover/mil:translate-x-2" />
-                          <div className="absolute -bottom-10 -right-10 w-[120%] h-[60%] opacity-80">
-                            <img src="/products/e620-transparent.png" alt="Military" className="w-full h-full object-contain" />
+                        <Link href="/solutions/defense" className="group/def relative h-[260px] bg-white/70 rounded-3xl overflow-hidden p-6 flex flex-col items-start border border-stone-200 hover:bg-[#1C5B68]/10 hover:border-[#1C5B68]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
+                          <div className="inline-flex items-center gap-2 px-2 py-0.5 mb-3 rounded-full border border-stone-200 bg-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#1C5B68]" />
+                            <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">Division</span>
+                          </div>
+                          <h4 className="text-xl font-black leading-[1.1] mb-3">Defense<br/>Division</h4>
+                          <p className="text-xs text-stone-500 max-w-[200px]">Tactical surveillance, combat training & consulting.</p>
+                          <ArrowRight className="w-5 h-5 mt-auto transition-transform group-hover/def:translate-x-2" />
+                          <div className="absolute -bottom-6 -right-6 w-[50%] h-[55%] opacity-80">
+                            <img src="/products/e620-transparent.png" alt="Defense" className="w-full h-full object-contain" />
                           </div>
                         </Link>
 
-                        <Link href="/solutions/firefighting" className="group/fire relative h-[450px] bg-white/70 rounded-[40px] overflow-hidden p-10 flex flex-col items-start border border-stone-200 hover:bg-[#F47A60]/10 hover:border-[#F47A60]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
-                          <h4 className="text-3xl font-black leading-[1.1] mb-6">{dict.solutions?.megaMenu?.fireTitle?.split(' & ').map((part, i, arr) => <span key={i}>{part}{i < arr.length - 1 ? <br /> : null}</span>)}</h4>
-                          <ArrowRight className="w-6 h-6 transition-transform group-hover/fire:translate-x-2" />
-                          <div className="absolute -bottom-10 -right-10 w-[110%] h-[60%] opacity-80">
-                            <img src="/products/e630-transparent.png" alt="Fire" className="w-full h-full object-contain" />
+                        <Link href="/solutions/emergency" className="group/ems relative h-[260px] bg-white/70 rounded-3xl overflow-hidden p-6 flex flex-col items-start border border-stone-200 hover:bg-[#F47A60]/10 hover:border-[#F47A60]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
+                          <div className="inline-flex items-center gap-2 px-2 py-0.5 mb-3 rounded-full border border-stone-200 bg-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#F47A60]" />
+                            <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">Division</span>
+                          </div>
+                          <h4 className="text-xl font-black leading-[1.1] mb-3">Emergency &<br/>Rescue</h4>
+                          <p className="text-xs text-stone-500 max-w-[200px]">Firefighting, search & rescue, emergency comms.</p>
+                          <ArrowRight className="w-5 h-5 mt-auto transition-transform group-hover/ems:translate-x-2" />
+                          <div className="absolute -bottom-6 -right-6 w-[50%] h-[55%] opacity-80">
+                            <img src="/products/e630-transparent.png" alt="Emergency" className="w-full h-full object-contain" />
+                          </div>
+                        </Link>
+
+                        <Link href="/consulting" className="group/con relative h-[260px] bg-white/70 rounded-3xl overflow-hidden p-6 flex flex-col items-start border border-stone-200 hover:bg-[#6366f1]/10 hover:border-[#6366f1]/30 hover:-translate-y-4 transition-all duration-700 hover:shadow-2xl">
+                          <div className="inline-flex items-center gap-2 px-2 py-0.5 mb-3 rounded-full border border-stone-200 bg-white">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#6366f1]" />
+                            <span className="text-[9px] font-bold text-stone-500 uppercase tracking-wider">Advisory</span>
+                          </div>
+                          <h4 className="text-xl font-black leading-[1.1] mb-3">Consulting<br/>Center</h4>
+                          <p className="text-xs text-stone-500 max-w-[200px]">Strategy, components advisory & supply chain.</p>
+                          <ArrowRight className="w-5 h-5 mt-auto transition-transform group-hover/con:translate-x-2" />
+                          <div className="absolute -bottom-6 -right-6 w-[50%] h-[55%] opacity-80">
+                            <img src="/products/e620-transparent.png" alt="Consulting" className="w-full h-full object-contain" />
                           </div>
                         </Link>
                       </div>
-                      <div className="flex justify-center mt-12">
+                      <div className="flex justify-center mt-6">
                         <Link
                           href="/solutions"
                           className="inline-flex items-center gap-2 px-6 py-4 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:opacity-90 transition-opacity"

@@ -2,53 +2,75 @@
 
 import { useEffect } from "react"
 import Link from "next/link"
-import { ArrowRight, Flame, Sprout, ShieldAlert } from "lucide-react"
+import { ArrowRight, Sprout, Shield, Flame, Lightbulb } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/components/locale-provider"
 
-export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
+export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto, payloadHero }: {
   activeIdx: number
   onIdxChange: React.Dispatch<React.SetStateAction<number>>
   isAuto: boolean
   setIsAuto: (auto: boolean) => void
+  payloadHero?: {
+    category?: string
+    title?: string
+    description?: string
+    image?: { url?: string }
+    buttonText?: string
+    buttonLink?: string
+    typeColor?: string
+  }
 }) {
   const { dict } = useLocale()
 
   useEffect(() => {
     if (!isAuto) return
     const interval = setInterval(() => {
-      onIdxChange((prev) => (prev + 1) % 3)
+      onIdxChange((prev) => (prev + 1) % 4)
     }, 5000)
     return () => clearInterval(interval)
   }, [isAuto, onIdxChange])
 
   const themes = [
     {
-      id: 'agro',
-      category: dict.hero.categories.agro,
-      title: dict.hero.titles.agro,
-      desc: dict.hero.descriptions.agro,
-      image: '/products/Kazhan-AGRO-30-agricultural-drone.jpg',
-      typeColor: '#71A58D',
+      id: 'commercial',
+      link: '/solutions/commercial',
+      category: payloadHero?.category || 'Commercial Division',
+      title: payloadHero?.title || 'Civilian Solutions',
+      desc: payloadHero?.description || 'Precision agriculture, solar & wind infrastructure, logistics strategy, and certified civil pilot training for commercial operators.',
+      image: payloadHero?.image?.url || '/products/Kazhan-AGRO-30-agricultural-drone.jpg',
+      typeColor: payloadHero?.typeColor || '#71A58D',
       icon: Sprout,
     },
     {
-      id: 'military',
-      category: dict.hero.categories.military,
-      title: dict.hero.titles.military,
-      desc: dict.hero.descriptions.military,
+      id: 'defense',
+      link: '/solutions/defense',
+      category: 'Defense Division',
+      title: 'Tactical Defense',
+      desc: 'Military-grade UAV systems for reconnaissance, border security, and electronic warfare resilience. Combat operator certification included.',
       image: '/e630hd.png',
       typeColor: '#1C5B68',
-      icon: ShieldAlert,
+      icon: Shield,
     },
     {
-      id: 'firefighting',
-      category: dict.hero.categories.firefighting,
-      title: dict.hero.titles.firefighting,
-      desc: dict.hero.descriptions.firefighting,
+      id: 'emergency',
+      link: '/solutions/emergency',
+      category: 'Emergency & Rescue',
+      title: 'Rapid Response',
+      desc: 'Next-generation firefighting drones with thermal optics and suppressant delivery. Search & rescue systems for hazardous terrain.',
       image: '/products/Kazhan-E630-Firefighter-Drone-1.webp',
       typeColor: '#F47A60',
       icon: Flame,
+    },
+    {
+      id: 'consulting',
+      link: '/consulting',
+      category: 'Consulting Center',
+      title: 'Strategic Advisory',
+      desc: 'Cross-industry UAV strategy, component sourcing intelligence, supply chain localization, and custom platform development.',
+      image: '/products/SHMAVIK-quadcopter-scout-drone.webp',
+      typeColor: '#6366f1',
+      icon: Lightbulb,
     }
   ]
 
@@ -102,8 +124,8 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
                 size="lg"
                 className="bg-primary text-primary-foreground px-8 py-7 text-lg rounded-2xl group transition-all duration-500 hover:scale-105 hover:opacity-90 active:scale-95 shadow-2xl shadow-primary/20 backdrop-blur-md"
               >
-                <Link href={`/solutions/${current.id}`} className="flex items-center">
-                  {dict.hero.exploreSolutions}
+                <Link href={current.link} className="flex items-center">
+                  {payloadHero?.buttonText || dict.hero.exploreSolutions}
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
                 </Link>
               </Button>
@@ -161,7 +183,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
               <div
                 className="absolute inset-0 rounded-full border-2 transition-colors duration-1000 ease-in-out pointer-events-none"
                 style={{
-                  transform: `rotate(${activeIdx * 120}deg)`,
+                  transform: `rotate(${activeIdx * 90}deg)`,
                   clipPath: 'inset(0 0 70% 0)',
                   borderColor: current.typeColor + '66'
                 }}
@@ -170,7 +192,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
               {/* Orbital Buttons — rendered LAST so they sit on top of everything */}
               <div className="absolute inset-0 rounded-full" style={{ zIndex: 60 }}>
                 {themes.map((theme, i) => {
-                  const rotation = i * 120
+                  const rotation = i * 90
                   return (
                     <div
                       key={theme.id}
@@ -204,7 +226,7 @@ export function HeroSection({ activeIdx, onIdxChange, isAuto, setIsAuto }: {
                             style={{ color: i === activeIdx ? theme.typeColor : 'rgba(255,255,255,0.4)' }}
                           />
                           <span className="text-[11px] font-black uppercase tracking-wider text-white">
-                            {dict.hero.orbitalLabels[theme.id as keyof typeof dict.hero.orbitalLabels]}
+                            {theme.category}
                           </span>
                         </button>
                       </div>

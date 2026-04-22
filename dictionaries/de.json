@@ -11,17 +11,26 @@
     "categories": {
       "agro": "Intelligente Landwirtschaft",
       "military": "Taktische Verteidigung",
-      "firefighting": "Notfallrettung"
+      "firefighting": "Notfallrettung",
+      "solar": "Solarenergie",
+      "cranes": "Winterbetrieb",
+      "wind": "Windenergie"
     },
     "titles": {
       "agro": "Zukunft der Landwirtschaft",
       "military": "Präzisionssicherheit",
-      "firefighting": "Thermische Widerstandsfähigkeit"
+      "firefighting": "Thermische Widerstandsfähigkeit",
+      "solar": "Wartung erneuerbarer Energien",
+      "cranes": "Kranbetrieb bei Kälte",
+      "wind": "Erneuerbare Installation"
     },
     "descriptions": {
       "agro": "VerdaAgro verbindet Präzisionstechnik mit biologischen Erkenntnissen. Maximieren Sie Erträge mit autonomen Drohnenschwärmen und IoT-Sensornetzwerken.",
       "military": "Militärische UAV-Systeme für anspruchsvolle Aufklärung und strategische Überlegenheit. Schweizer Zuverlässigkeit für die globale Verteidigung.",
-      "firefighting": "Feuerlöschdrohnen der nächsten Generation mit fortschrittlicher Thermooptik. Schneller Einsatz in Hochtemperaturumgebungen zum Schutz von Leben und Wäldern."
+      "firefighting": "Feuerlöschdrohnen der nächsten Generation mit fortschrittlicher Thermooptik. Schneller Einsatz in Hochtemperaturumgebungen zum Schutz von Leben und Wäldern.",
+      "solar": "Autonome Drohnenlösungen zur effizienten Reinigung und Inspektion von Solarmodulen zur Maximierung des Energieertrags und Verlängerung der Lebensdauer.",
+      "cranes": "Spezialisierter UAV-Support für Liebherr-Kranbetrieb unter extremen Winterbedingungen mit höchster Sicherheit und Präzision.",
+      "wind": "Fortschrittliche Drohnensysteme für Installation und Wartung von Windturbinen zur Reduzierung von Ausfallzeiten und Betriebskosten."
     },
     "exploreSolutions": "Lösungen entdecken",
     "learnTech": "Technologie lernen",
@@ -30,7 +39,10 @@
     "orbitalLabels": {
       "agro": "AGRO",
       "military": "MILITÄR",
-      "firefighting": "FEUERWEHR"
+      "firefighting": "FEUERWEHR",
+      "solar": "SOLAR",
+      "cranes": "KRANE",
+      "wind": "WIND"
     }
   },
   "info": {
@@ -88,6 +100,60 @@
         }
       ]
     },
+    "solar": {
+      "tag": "SOLARWARTUNG",
+      "title": "Solarreinigung & Inspektion",
+      "cards": [
+        {
+          "title": "Automatisierte Modulreinigung",
+          "desc": "Drohnenmontierte Reinigungssysteme, die Staub und Schmutz von Solaranlagen entfernen, ohne Wasserverschwendung oder manuelle Arbeit."
+        },
+        {
+          "title": "Thermische Leistungsscan",
+          "desc": "Infrarot-Scanning zur Erkennung unterperformender Zellen, Hotspots und elektrischer Fehler auf großen Solarfarmen."
+        },
+        {
+          "title": "Prädiktive Wartung",
+          "desc": "KI-gesteuerte Planung basierend auf Wettermustern und Verschmutzungsraten zur Optimierung von Reinigungszyklen und Energieertrag."
+        }
+      ]
+    },
+    "cranes": {
+      "tag": "WINTERBETRIEB",
+      "title": "Liebherr-Kranbetrieb im Winter",
+      "cards": [
+        {
+          "title": "Eisbildungserkennung",
+          "desc": "UAV-gestützte Inspektion von Kranauslegern und Kabeln auf Eisbildung, die die strukturelle Integrität beeinträchtigen könnte."
+        },
+        {
+          "title": "Kaltwetter-Vermessungen",
+          "desc": "Schnelle Baustellenerfassung bei Schnee und schlechter Sicht zur Gewährleistung sicherer Hebeoperationen."
+        },
+        {
+          "title": "Ausrüstungsüberwachung",
+          "desc": "Thermische und visuelle Kontrollen von Hydraulik und Motoren zur Vermeidung von Kältewetter-Ausfällen."
+        }
+      ]
+    },
+    "wind": {
+      "tag": "ERNEUERBARE ENERGIE",
+      "title": "Windturbineninstallation & Service",
+      "cards": [
+        {
+          "title": "Rotorblattinspektion",
+          "desc": "Hochauflösende Bildgebung und LiDAR-Scanning zur Erkennung von Rissen, Erosion und Blitzschäden an Rotorblättern."
+        },
+        {
+          "title": "Installationsunterstützung",
+          "desc": "Präzise Drohnenvermessungen und Nutzlasttransporte zur Unterstützung von Technikern bei Montage und Inbetriebnahme."
+        },
+        {
+          "title": "Offshore-Logistik",
+          "desc": "Autonome Versorgungsflüge und Inspektionsmissionen für Offshore-Windparks unter anspruchsvollen maritimen Bedingungen."
+        }
+      ]
+    },
     "readMore": "Weiterlesen"
   },
   "about": {
@@ -133,6 +199,9 @@
     "agriculture": "Landwirtschaft",
     "defense": "Verteidigung",
     "emergency": "Notfall",
+    "solar": "Solarmodule",
+    "cranes": "Liebherr Krane",
+    "wind": "Windturbinen",
     "allProducts": "Alle Produkte",
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfService": "Nutzungsbedingungen",
@@ -166,7 +235,10 @@
     "megaMenu": {
       "agroTitle": "Intelligente & Nachhaltige Landwirtschaft",
       "militaryTitle": "Taktische Verteidigung & Überwachung",
-      "fireTitle": "Notfallrettung & Unterstützung"
+      "fireTitle": "Notfallrettung & Unterstützung",
+      "solarTitle": "Solarreinigung & Inspektion",
+      "cranesTitle": "Winter-Kranbetrieb",
+      "windTitle": "Windturbineninstallation"
     },
     "agro": {
       "tag": "AGRO-ABTEILUNG",
@@ -196,6 +268,36 @@
         { "title": "Thermische Brandkartierung", "desc": "Echtzeit-Thermokartierung zur Wald- und Gebäudebrandbekämpfung." },
         { "title": "Präzise Löschmittelabgabe", "desc": "Autonome Lieferung von hochvolumigem Feuerlöschmittel direkt zu Hotspots." },
         { "title": "Suche & Rettung", "desc": "Dualspektralsensoren zum Auffinden vermisster Personen durch Rauch und dichte Umweltrückstände." }
+      ]
+    },
+    "solar": {
+      "tag": "SOLARWARTUNG",
+      "title": "Solarreinigung & Inspektion",
+      "description": "Autonome Drohnenlösungen zur effizienten Reinigung und Inspektion von Solarmodulen zur Maximierung des Energieertrags und Verlängerung der Lebensdauer.",
+      "features": [
+        { "title": "Automatisierte Modulreinigung", "desc": "Drohnenmontierte Reinigungssysteme, die Staub und Schmutz von Solaranlagen entfernen, ohne Wasserverschwendung oder manuelle Arbeit." },
+        { "title": "Thermische Leistungsscan", "desc": "Infrarot-Scanning zur Erkennung unterperformender Zellen, Hotspots und elektrischer Fehler auf großen Solarfarmen." },
+        { "title": "Prädiktive Wartung", "desc": "KI-gesteuerte Planung basierend auf Wettermustern und Verschmutzungsraten zur Optimierung von Reinigungszyklen und Energieertrag." }
+      ]
+    },
+    "cranes": {
+      "tag": "WINTERBETRIEB",
+      "title": "Liebherr-Kranbetrieb im Winter",
+      "description": "Spezialisierter UAV-Support für Liebherr-Kranbetrieb unter extremen Winterbedingungen mit höchster Sicherheit und Präzision.",
+      "features": [
+        { "title": "Eisbildungserkennung", "desc": "UAV-gestützte Inspektion von Kranauslegern und Kabeln auf Eisbildung, die die strukturelle Integrität beeinträchtigen könnte." },
+        { "title": "Kaltwetter-Vermessungen", "desc": "Schnelle Baustellenerfassung bei Schnee und schlechter Sicht zur Gewährleistung sicherer Hebeoperationen." },
+        { "title": "Ausrüstungsüberwachung", "desc": "Thermische und visuelle Kontrollen von Hydraulik und Motoren zur Vermeidung von Kältewetter-Ausfällen." }
+      ]
+    },
+    "wind": {
+      "tag": "ERNEUERBARE ENERGIE",
+      "title": "Windturbineninstallation & Service",
+      "description": "Fortschrittliche Drohnensysteme für Installation und Wartung von Windturbinen zur Reduzierung von Ausfallzeiten und Betriebskosten.",
+      "features": [
+        { "title": "Rotorblattinspektion", "desc": "Hochauflösende Bildgebung und LiDAR-Scanning zur Erkennung von Rissen, Erosion und Blitzschäden an Rotorblättern." },
+        { "title": "Installationsunterstützung", "desc": "Präzise Drohnenvermessungen und Nutzlasttransporte zur Unterstützung von Technikern bei Montage und Inbetriebnahme." },
+        { "title": "Offshore-Logistik", "desc": "Autonome Versorgungsflüge und Inspektionsmissionen für Offshore-Windparks unter anspruchsvollen maritimen Bedingungen." }
       ]
     }
   },

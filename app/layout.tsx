@@ -32,6 +32,7 @@ const ttLakesNeue = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rotarius.com'),
   title: 'Rotarius | Swiss Precision UAV Solutions',
   description: 'Full-cycle drone manufacturing for agriculture, defense, and emergency response. Swiss precision built on years of UAV expertise.',
   icons: {

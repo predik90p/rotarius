@@ -11,17 +11,26 @@
     "categories": {
       "agro": "Smart Agriculture",
       "military": "Tactical Defense",
-      "firefighting": "Emergency Response"
+      "firefighting": "Emergency Response",
+      "solar": "Solar Energy",
+      "cranes": "Winter Operations",
+      "wind": "Wind Energy"
     },
     "titles": {
       "agro": "Future of Farming",
       "military": "Precision Security",
-      "firefighting": "Thermal Resilience"
+      "firefighting": "Thermal Resilience",
+      "solar": "Clean Energy Maintenance",
+      "cranes": "Cold Weather Crane Ops",
+      "wind": "Renewable Installation"
     },
     "descriptions": {
       "agro": "VerdaAgro combines precision engineering with biological insights. Maximize yields with autonomous drone fleets and IoT sensor networks.",
       "military": "Military-grade UAV systems designed for high-stakes reconnaissance and strategic superiority. Swiss-engineered reliability for global defense.",
-      "firefighting": "Next-generation firefighting drones with advanced thermal optics. Rapid deployment in high-temperature environments to save lives and forests."
+      "firefighting": "Next-generation firefighting drones with advanced thermal optics. Rapid deployment in high-temperature environments to save lives and forests.",
+      "solar": "Autonomous drone solutions for efficient solar panel cleaning and inspection, maximizing energy output and extending asset life.",
+      "cranes": "Specialized UAV support for Liebherr crane operations in extreme winter conditions, ensuring safety and precision.",
+      "wind": "Advanced drone systems for wind turbine installation and maintenance, reducing downtime and operational costs."
     },
     "exploreSolutions": "Explore Solutions",
     "learnTech": "Learn Tech",
@@ -30,7 +39,10 @@
     "orbitalLabels": {
       "agro": "AGRO",
       "military": "MILITARY",
-      "firefighting": "FIREFIGHTING"
+      "firefighting": "FIREFIGHTING",
+      "solar": "SOLAR",
+      "cranes": "CRANES",
+      "wind": "WIND"
     }
   },
   "info": {
@@ -88,6 +100,60 @@
         }
       ]
     },
+    "solar": {
+      "tag": "SOLAR MAINTENANCE",
+      "title": "Solar Panel Washing & Inspection",
+      "cards": [
+        {
+          "title": "Automated Panel Cleaning",
+          "desc": "Drone-mounted cleaning systems that remove dust and debris from solar arrays without water waste or manual labor."
+        },
+        {
+          "title": "Thermal Performance Scan",
+          "desc": "Infrared scanning to detect underperforming cells, hotspots, and electrical faults across large solar farms."
+        },
+        {
+          "title": "Predictive Maintenance",
+          "desc": "AI-driven scheduling based on weather patterns and soiling rates to optimize cleaning cycles and energy yield."
+        }
+      ]
+    },
+    "cranes": {
+      "tag": "WINTER OPERATIONS",
+      "title": "Liebherr Crane Support in Winter",
+      "cards": [
+        {
+          "title": "Icing Detection",
+          "desc": "UAV-based inspection of crane booms and cables for ice buildup that could compromise structural integrity."
+        },
+        {
+          "title": "Cold Weather Surveys",
+          "desc": "Rapid site assessments in snow and low-visibility conditions to ensure safe lifting operations."
+        },
+        {
+          "title": "Equipment Monitoring",
+          "desc": "Thermal and visual checks on hydraulics and engines to prevent cold-weather failures before they happen."
+        }
+      ]
+    },
+    "wind": {
+      "tag": "RENEWABLE ENERGY",
+      "title": "Wind Turbine Installation & Service",
+      "cards": [
+        {
+          "title": "Blade Inspection",
+          "desc": "High-resolution imaging and LiDAR scanning to detect cracks, erosion, and lightning damage on turbine blades."
+        },
+        {
+          "title": "Installation Support",
+          "desc": "Precision drone surveys and payload delivery to assist technicians during turbine assembly and commissioning."
+        },
+        {
+          "title": "Offshore Logistics",
+          "desc": "Autonomous supply runs and inspection flights for offshore wind farms in challenging maritime conditions."
+        }
+      ]
+    },
     "readMore": "Read More"
   },
   "about": {
@@ -133,6 +199,9 @@
     "agriculture": "Agriculture",
     "defense": "Defense",
     "emergency": "Emergency",
+    "solar": "Solar Panels",
+    "cranes": "Liebherr Cranes",
+    "wind": "Wind Turbines",
     "allProducts": "All Products",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -173,7 +242,10 @@
     "megaMenu": {
       "agroTitle": "Smart & Sustainable Agriculture",
       "militaryTitle": "Tactical Defense & Surveillance",
-      "fireTitle": "Emergency Rescue & Support"
+      "fireTitle": "Emergency Rescue & Support",
+      "solarTitle": "Solar Panel Washing & Inspection",
+      "cranesTitle": "Winter Crane Operations",
+      "windTitle": "Wind Turbine Installation"
     },
     "agro": {
       "tag": "AGRO DIVISION",
@@ -203,6 +275,36 @@
         { "title": "Thermal Fire Mapping", "desc": "Real-time thermal hotspot detection for forest and structure fire containment." },
         { "title": "Precision Suppression", "desc": "Autonomous delivery of high-volume fire retardant material directly to hotspots." },
         { "title": "Search & Rescue", "desc": "Dual spectral sensors to find missing persons through smoke and dense environmental debris." }
+      ]
+    },
+    "solar": {
+      "tag": "SOLAR MAINTENANCE",
+      "title": "Solar Panel Washing & Inspection",
+      "description": "Autonomous drone solutions for efficient solar panel cleaning and inspection, maximizing energy output and extending asset life.",
+      "features": [
+        { "title": "Automated Panel Cleaning", "desc": "Drone-mounted cleaning systems that remove dust and debris from solar arrays without water waste or manual labor." },
+        { "title": "Thermal Performance Scan", "desc": "Infrared scanning to detect underperforming cells, hotspots, and electrical faults across large solar farms." },
+        { "title": "Predictive Maintenance", "desc": "AI-driven scheduling based on weather patterns and soiling rates to optimize cleaning cycles and energy yield." }
+      ]
+    },
+    "cranes": {
+      "tag": "WINTER OPERATIONS",
+      "title": "Liebherr Crane Support in Winter",
+      "description": "Specialized UAV support for Liebherr crane operations in extreme winter conditions, ensuring safety and precision.",
+      "features": [
+        { "title": "Icing Detection", "desc": "UAV-based inspection of crane booms and cables for ice buildup that could compromise structural integrity." },
+        { "title": "Cold Weather Surveys", "desc": "Rapid site assessments in snow and low-visibility conditions to ensure safe lifting operations." },
+        { "title": "Equipment Monitoring", "desc": "Thermal and visual checks on hydraulics and engines to prevent cold-weather failures before they happen." }
+      ]
+    },
+    "wind": {
+      "tag": "RENEWABLE ENERGY",
+      "title": "Wind Turbine Installation & Service",
+      "description": "Advanced drone systems for wind turbine installation and maintenance, reducing downtime and operational costs.",
+      "features": [
+        { "title": "Blade Inspection", "desc": "High-resolution imaging and LiDAR scanning to detect cracks, erosion, and lightning damage on turbine blades." },
+        { "title": "Installation Support", "desc": "Precision drone surveys and payload delivery to assist technicians during turbine assembly and commissioning." },
+        { "title": "Offshore Logistics", "desc": "Autonomous supply runs and inspection flights for offshore wind farms in challenging maritime conditions." }
       ]
     }
   },
