@@ -97,18 +97,23 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
         {/* Main Content Area */}
         <div className="flex-1">
           {/* Mobile Horizontal Tabs */}
-          <div className="flex xl:hidden gap-2 mb-8 overflow-x-auto pb-2">
-            {INFO_DATA.map((item, i) => (
+          <div className="flex xl:hidden gap-2 mb-6 overflow-x-auto pb-2 -mx-1 px-1">
+            {[
+              { short: "Commercial", full: "Commercial" },
+              { short: "Defense", full: "Defense" },
+              { short: "Emergency", full: "Emergency" },
+              { short: "Consulting", full: "Consulting" },
+            ].map((item, i) => (
               <button
                 key={i}
                 onClick={() => onIdxChange(i)}
-                className={`flex-shrink-0 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider border transition-all ${
+                className={`flex-shrink-0 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border transition-all ${
                   i === activeIdx
                     ? "bg-foreground text-background border-foreground"
                     : "bg-background text-muted-foreground border-border hover:border-foreground"
                 }`}
               >
-                {item.tag}
+                {item.short}
               </button>
             ))}
           </div>
@@ -128,8 +133,8 @@ export function InfoSection({ activeIdx, onIdxChange }: InfoSectionProps) {
               </Button>
             </div>
 
-            <div key={`img-${activeIdx}`} className="relative aspect-[4/3] rounded-[48px] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-1000 group">
-              <img src={data.mainImg} alt="Main" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" />
+            <div key={`img-${activeIdx}`} className="relative rounded-[32px] lg:rounded-[48px] overflow-hidden shadow-2xl animate-in fade-in zoom-in duration-1000 group">
+              <img src={data.mainImg} alt="Main" className="w-full aspect-[4/3] lg:aspect-[4/3] object-cover transition-transform duration-1000 group-hover:scale-105" />
             </div>
           </div>
 
